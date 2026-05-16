@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - AI Evaluator</title>
+    <link rel="stylesheet" href="../CSS Files/global.css">
+    <link rel="stylesheet" href="../CSS Files/dashboard.css">
+</head>
+<body>
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-text">Dark</span>
+    </div>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="gradient-text">AI Evaluator</h2>
+                <p class="user-role">Student</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" onclick="showSection('overview', event)">
+                    <span class="nav-icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('upload', event)">
+                    <span class="nav-icon">📤</span>
+                    <span>Upload Answer Sheet</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('results', event)">
+                    <span class="nav-icon">📈</span>
+                    <span>View Results</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('performance', event)">
+                    <span class="nav-icon">📊</span>
+                    <span>Performance Analytics</span>
+                </a>
+                <a href="index.html" class="nav-item logout">
+                    <span class="nav-icon">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1 id="section-title">Student Dashboard</h1>
+                <div class="header-actions">
+                    <button class="btn btn-primary" onclick="showSection('upload', event)">+ Upload Answer Sheet</button>
+                </div>
+            </header>
+
+            <div id="overview" class="content-section active">
+                <div class="stats-grid">
+                    <div class="stat-card card">
+                        <div class="stat-icon">📝</div>
+                        <div class="stat-info">
+                            <h3>8</h3>
+                            <p>Exams Taken</p>
+                        </div>
+                    </div>
+                    <div class="stat-card card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-info">
+                            <h3>6</h3>
+                            <p>Evaluated</p>
+                        </div>
+                    </div>
+                    <div class="stat-card card">
+                        <div class="stat-icon">⏳</div>
+                        <div class="stat-info">
+                            <h3>2</h3>
+                            <p>Pending</p>
+                        </div>
+                    </div>
+                    <div class="stat-card card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <h3>82%</h3>
+                            <p>Average Score</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-results card">
+                    <h3>Recent Results</h3>
+                    <div class="results-list">
+                        <div class="result-item">
+                            <div class="result-info">
+                                <p class="result-title">Mathematics Final Exam</p>
+                                <p class="result-meta">Evaluated 1 day ago</p>
+                            </div>
+                            <div class="result-score-badge">
+                                <span class="score">85/100</span>
+                            </div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-info">
+                                <p class="result-title">Physics Unit Test</p>
+                                <p class="result-meta">Evaluated 3 days ago</p>
+                            </div>
+                            <div class="result-score-badge">
+                                <span class="score">78/100</span>
+                            </div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-info">
+                                <p class="result-title">Chemistry Mid Term</p>
+                                <p class="result-meta">Pending evaluation</p>
+                            </div>
+                            <div class="result-score-badge">
+                                <span class="badge badge-pending">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="upload" class="content-section">
+                <div class="upload-container card">
+                    <h3>Upload Answer Sheet</h3>
+                    <form id="answerSheetForm">
+                        <div class="form-group">
+                            <label>Exam Name</label>
+                            <input type="text" id="examName" name="exam_name" placeholder="e.g., Mathematics Final Exam" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="e.g., Mathematics" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Student Roll Number</label>
+                            <input type="text" id="rollNumber" name="roll_number" placeholder="e.g., 2024001" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Upload Answer Sheet (Handwritten)</label>
+                            <div class="file-upload" id="answerSheetUpload">
+                                <input type="file" id="answerSheetFile" name="files" accept="image/*,.pdf" multiple hidden>
+                                <div class="upload-placeholder" onclick="document.getElementById('answerSheetFile').click()">
+                                    <span class="upload-icon">📸</span>
+                                    <p>Click to upload or drag and drop</p>
+                                    <p class="upload-hint">Upload images of your handwritten answer sheet</p>
+                                    <p class="upload-hint">JPG, PNG (You can upload multiple pages)</p>
+                                </div>
+                                <div class="file-preview" id="answerSheetPreview" style="display: none;">
+                                    <div id="imageGallery" class="image-gallery"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Additional Notes (Optional)</label>
+                            <textarea id="notes" name="notes" rows="3" placeholder="Any special instructions or notes for the teacher..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Answer Sheet</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="results" class="content-section">
+                <div class="results-container">
+                    <div class="results-header">
+                        <input type="text" placeholder="Search exams..." class="search-input">
+                        <select class="filter-select">
+                            <option>All Results</option>
+                            <option>Evaluated</option>
+                            <option>Pending</option>
+                        </select>
+                    </div>
+                    <div class="results-grid">
+                        <div class="exam-result-card card" onclick="showDetailedResult()">
+                            <div class="exam-header">
+                                <h4>Mathematics Final Exam</h4>
+                                <span class="badge badge-evaluated">Evaluated</span>
+                            </div>
+                            <div class="exam-score">
+                                <span class="score-large">85</span>
+                                <span class="score-total">/100</span>
+                            </div>
+                            <div class="exam-details">
+                                <p>Submitted: 2 days ago</p>
+                                <p>Evaluated: 1 day ago</p>
+                            </div>
+                            <button class="btn btn-secondary btn-full">View Details</button>
+                        </div>
+                        <div class="exam-result-card card">
+                            <div class="exam-header">
+                                <h4>Physics Unit Test</h4>
+                                <span class="badge badge-evaluated">Evaluated</span>
+                            </div>
+                            <div class="exam-score">
+                                <span class="score-large">78</span>
+                                <span class="score-total">/100</span>
+                            </div>
+                            <div class="exam-details">
+                                <p>Submitted: 4 days ago</p>
+                                <p>Evaluated: 3 days ago</p>
+                            </div>
+                            <button class="btn btn-secondary btn-full">View Details</button>
+                        </div>
+                        <div class="exam-result-card card">
+                            <div class="exam-header">
+                                <h4>Chemistry Mid Term</h4>
+                                <span class="badge badge-pending">Pending</span>
+                            </div>
+                            <div class="exam-score">
+                                <span class="score-pending">⏳</span>
+                            </div>
+                            <div class="exam-details">
+                                <p>Submitted: 1 day ago</p>
+                                <p>Awaiting evaluation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="performance" class="content-section">
+                <div class="performance-container">
+                    <div class="performance-overview card">
+                        <h3>Performance Overview</h3>
+                        <div class="performance-stats">
+                            <div class="performance-stat">
+                                <h4>Average Score</h4>
+                                <p class="stat-value">82%</p>
+                            </div>
+                            <div class="performance-stat">
+                                <h4>Highest Score</h4>
+                                <p class="stat-value">92%</p>
+                            </div>
+                            <div class="performance-stat">
+                                <h4>Total Exams</h4>
+                                <p class="stat-value">8</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container card">
+                        <h3>Performance Trend</h3>
+                        <canvas id="performanceChart" width="400" height="200"></canvas>
+                    </div>
+
+                    <div class="subject-performance card">
+                        <h3>Subject-wise Performance</h3>
+                        <div class="subject-list">
+                            <div class="subject-item">
+                                <div class="subject-info">
+                                    <span>Mathematics</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="subject-item">
+                                <div class="subject-info">
+                                    <span>Physics</span>
+                                    <span>78%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 78%"></div>
+                                </div>
+                            </div>
+                            <div class="subject-item">
+                                <div class="subject-info">
+                                    <span>Chemistry</span>
+                                    <span>82%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 82%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal" id="resultModal">
+        <div class="modal-content">
+            <h3>Exam Results - Mathematics Final Exam</h3>
+            <div class="modal-score">
+                <span class="score-large">85</span>
+                <span class="score-total">/100</span>
+            </div>
+            <div class="feedback-section">
+                <h4>AI Feedback</h4>
+                <p>Your performance was excellent! You demonstrated strong understanding of the concepts.</p>
+                <div class="question-feedback">
+                    <p><strong>Question 1:</strong> Perfect answer with clear methodology (10/10)</p>
+                    <p><strong>Question 2:</strong> Good work, minor calculation error (8/10)</p>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-full" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/chart.js"></script>
+</body>
+</html>

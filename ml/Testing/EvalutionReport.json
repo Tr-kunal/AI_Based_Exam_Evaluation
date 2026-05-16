@@ -1,0 +1,190 @@
+Here's the evaluation of the student's answers based on the provided question paper:
+
+```json
+{
+  "Q1(i)": {
+    "student_answer": "to highlight the richness of world cultures\nto highlight the essential role of intercultural dialogue for achieving peace and sustainable development",
+    "teacher_answer": "The purpose of UNESCO leading the celebration of World Day for Cultural Diversity for Dialogue and Development is to: 1. Highlight the richness of the world's cultures and their essential role for dialogue. 2. Acknowledge culture's contribution to the three dimensions of sustainable development (economic, social, environmental), thereby fostering peace and development.",
+    "score": 1,
+    "max_marks": 1,
+    "feedback": "Both points are correct and directly relate to the purpose of the celebration as outlined in the passage."
+  },
+  "Q1(ii)": {
+    "student_answer": "(D)",
+    "teacher_answer": "(D) highlighting the real worth of cultural and creative sector at generating social cohesion and educational resource during an international emergency",
+    "score": 1,
+    "max_marks": 1,
+    "feedback": "Correct option chosen."
+  },
+  "Q1(iii)": {
+    "student_answer": "Sustainable development is crucial for the world in recent times. It can be achieved - by drawing upon the I creative potential of the world's diverse cultures by engaging in continuous dialogue by acknowledging further the natural and cultural diversity of the word ley affirming culture's contribution to the three dimensions of sustainable development.",
+    "teacher_answer": "Sustainable Development Goals can be achieved by recognizing and harnessing the creative potential of diverse cultures, fostering continuous dialogue, acknowledging the natural and cultural diversity of the world, and by affirming culture's contribution to the economic, social, and environmental dimensions of sustainable development. (Approx. 40 words)",
+    "score": 2,
+    "max_marks": 2,
+    "feedback": "Excellent. The student accurately extracted multiple key points from the passage on how Sustainable Development Goals can be achieved."
+  },
+  "Q1(iv)": {
+    "student_answer": "'Cultural diversity is an asset'. The tone of the writer in this line is serious as well as hopeful. The heriter highlights the necessity for bridging the gap between cultures for peace i staleility and development. The writer is also hopeful the cultural diversity would reduce poverty and achieve sustainable development.",
+    "teacher_answer": "The tone of the writer in 'Cultural diversity is an asset' is affirmative, appreciative, and optimistic. They are presenting cultural diversity not as a challenge but as a valuable resource to be leveraged for positive outcomes like peace, stability, development, reducing poverty, and achieving sustainable development. (Approx. 40 words)",
+    "score": 2,
+    "max_marks": 2,
+    "feedback": "Good. The student correctly identified the tone as hopeful and serious, and provided a rational justification linking it to the positive outcomes of cultural diversity mentioned in the passage."
+  },
+  "Q3(v)": {
+    "student_answer": "it",
+    "teacher_answer": "these",
+    "score": 0,
+    "max_marks": 1,
+    "feedback": "Incorrect. The subject 'reports' is plural, so the correct pronoun should be 'these' or 'them', not 'it'."
+  },
+  "Q3(vi)": {
+    "student_answer": "Error: ecializes, Correction: Specialize",
+    "teacher_answer": "Error: pay | Correction: pays",
+    "score": 0,
+    "max_marks": 1,
+    "feedback": "The provided answer 'Error: ecializes, Correction: Specialize' does not correspond to the question `Q3(vi)` in the question paper. The correct error for the given sentence ('The 2020 research study pay attention...') is 'pay', and the correction is 'pays'."
+  },
+  "Q3(vii)": {
+    "student_answer": "Error: Erros, Correction: learn",
+    "teacher_answer": "(C) reducing reduce",
+    "score": 0,
+    "max_marks": 1,
+    "feedback": "The provided answer 'Error: Erros, Correction: learn' does not correspond to the question `Q3(vii)` in the question paper. The correct option identifying the error and correction for the given sentence ('The campaign encourages parents to reducing screen time...') is (C) reducing reduce."
+  },
+  "Q3(viii)": {
+    "student_answer": "(A) must",
+    "teacher_answer": "(C) to understand",
+    "score": 0,
+    "max_marks": 1,
+    "feedback": "The provided answer '(A) must' does not correspond to the options given for question `Q3(viii)`. The correct option to complete the sentence is (C) 'to understand'."
+  },
+  "Q4(A)": {
+    "student_answer": "Write a letter of enquiry to the Principal of Excellent Cooking, Block-D, Mahish Enclave, regarding a cooking course. Your letter should reference an advertisement in Hindustan Times dated 25 February 20XX and detail your interest in learning cooking during holidays to pursue opening a bakery. Request information on course structure, duration, fee structure, class timings, transport facilities, on-job trainings, and internships, and any other relevant details.",
+    "teacher_answer": "A formal letter of enquiry addressed to the Director, Foreign Language, La-France institute, Mohan Circle, from Aman/Amita, 45-B, Bellaview Nagar. The letter should include details such as: Sender's Address, Date, Receiver's Address, Salutation, Subject (Enquiry about French Language Course), Body (reference to interest, enquiry about eligibility, duration of different courses, medium of instruction, examination cycle/dates, batch timings, fees, certification), Complimentary Close, Sender's Name. (Approx. 120 words)",
+    "score": 0,
+    "max_marks": 5,
+    "feedback": "The student has provided the text of a different question, not an answer to the specified letter writing task (`Q4(A)`) about enquiring about a French language course."
+  },
+  "Q5(A)": {
+    "student_answer": "Analyze the given graph illustrating the data about the number of gyms and members in your city over the past decade. Your analysis should describe the trends, including periods of upward growth (e.g., 2018, 2016, 2022), the impact of the COVID-19 pandemic (2020), and the reasons for renewed interest in physical activities and gym memberships.",
+    "teacher_answer": "An analytical paragraph (approx. 120 words) that compares and contrasts how boys and girls spend their free time based on the provided data table. Key aspects to cover: identify common hobbies, note significant differences in percentages for specific activities, analyze trends and draw conclusions about typical leisure preferences, maintain a formal, objective tone.",
+    "score": 0,
+    "max_marks": 5,
+    "feedback": "The student has provided the text of a different question, not an answer to the specified analytical paragraph task (`Q5(A)`) about teenagers' free time based on a table."
+  },
+  "Q6(B)(i)": {
+    "student_answer": "From the above context one inference that can be stated about Anne is that she loved her geandmother and shared a deep bond with her. Thus Anne was a loving granddaughter.",
+    "teacher_answer": "An inference about Anne from this context is that she deeply cared for her grandmother, and her grandmother's illness overshadowed her own birthday, indicating her empathetic and loving nature. The subsequent mention of lighting a candle for her grandmother on her birthday further reinforces this.",
+    "score": 1,
+    "max_marks": 1,
+    "feedback": "Correct inference. The student accurately identified Anne's loving nature and deep bond with her grandmother from the given context."
+  },
+  "Q6(B)(ii)": {
+    "student_answer": "(C) Montessori Nursery School",
+    "teacher_answer": "(C) Montessori Nursery School",
+    "score": 1,
+    "max_marks": 1,
+    "feedback": "Correct."
+  },
+  "Q6(B)(iii)": {
+    "student_answer": "Mrs. Kuperus was the headmistress of the Montessori Nursery school. She neas Anne's class teacher in her sixth form. Anne shared a deep bond with Mrs. Kuperus. Their tears at the stime of departure is a testament to this statement.",
+    "teacher_answer": "Mrs. Kuperus was Anne's headmistress at the Montessori Nursery School. Anne shared a very close and affectionate relationship with her, as evidenced by both of them being in tears when Anne left the school.",
+    "score": 2,
+    "max_marks": 2,
+    "feedback": "Excellent answer. The student correctly identified Mrs. Kuperus and accurately described the deep, emotional bond Anne shared with her."
+  },
+  "Q6(B)(iv)": {
+    "student_answer": "st the end of the year we were both in tears as we said a melancholic farewell.",
+    "teacher_answer": "Acceptable synonyms include 'sorrowful', 'distressing', 'grievous', 'painful', 'tragic', 'upsetting', 'poignant'. 'Melancholic' is a suitable synonym.",
+    "score": 1,
+    "max_marks": 1,
+    "feedback": "Correct substitution. 'Melancholic' is an appropriate synonym for 'heartbreaking' in this context."
+  },
+  "Q7(B)(i)": {
+    "student_answer": "(B) sympathetic, understanding the depth of the boy's loss",
+    "teacher_answer": "(B) Sympathetic, understanding the depth of the boy's loss.",
+    "score": 1,
+    "max_marks": 1,
+    "feedback": "Correct option chosen."
+  },
+  "Q7(B)(ii)": {
+    "student_answer": "'Ball' is used as a metaphor in the above extract. Ball, here, symbolises the child's innocence and his childhood memories hich he had lost and is now gaining maturity chile sensing his responsibilities.",
+    "teacher_answer": "The 'ball' in the extract serves as a metaphor not just for a toy, but for the boy's lost childhood, innocence, security, and perhaps even early memories and attachments. Its loss represents the first significant experience of loss and the subsequent learning of responsibility and acceptance in life.",
+    "score": 1,
+    "max_marks": 1,
+    "feedback": "Excellent. The student accurately identified the metaphor and provided a clear and insightful interpretation of its symbolic meaning."
+  },
+  "Q7(B)(iii)": {
+    "student_answer": "'All his young days into the harbour\" refers to the boy's memories . The harbour reminds the boy of his young days when he used to play with his ball which was now lost into the harbour. The harbour is triggering the memories of his young days and the ball",
+    "teacher_answer": "The phrase 'all his young days into the harbour' implies that along with the ball, the boy's cherished memories of his early childhood and the innocence associated with those days are also metaphorically sinking into the past, as represented by the harbour where the ball is lost. It signifies the end of a phase of his life.",
+    "score": 1,
+    "max_marks": 1,
+    "feedback": "Correct explanation. The student aptly connected the phrase to the boy's lost childhood memories, triggered by the loss of the ball in the harbour."
+  },
+  "Q7(B)(iv)": {
+    "student_answer": "The boy's journey from 'shaking grief' to 'he is learning' represents his journey from his young young innocent days towards his maturity along with his responsibilities. The boy first, feels despondent and ultimate grief on losing the ball which leaves him stationery and rigid. Soon, he realizes his responsibility of losing things in this materialistic world. He is learning that money cannot buy back his memories but could only buy materialistic things.",
+    "teacher_answer": "The boy's journey begins with profound 'shaking grief' over the lost ball, symbolising his first real experience with loss and impermanence. This initial shock eventually leads to a crucial realization: 'he is learning' the inherent nature of loss in a materialistic world, and the responsibility of coping with it, understanding that some things, like memories and innocence, cannot be replaced by money. (Approx. 40 words)",
+    "score": 2,
+    "max_marks": 2,
+    "feedback": "Excellent description of the boy's emotional and psychological journey. The student accurately captured the transition from grief to a profound understanding of loss and responsibility."
+  },
+  "Q8(i)": {
+    "student_answer": "'Dust of snow' is a beautiful poem written by 'Robert Frost' illustrating the beauty of nature Initially in the poem, the poet heas feeling melancholic and highly despondent. He was wasting his time in grief. The images of crow hemlock tree and snow has been used by the poet for positive effect. Though these images are seen as harbingers of doom and bad omen, the poet uses them as a catylyst catalyst for positive change. The falling of snow from a hemlock tree that too by action of a crow, makes the poet happy for the rest of the day This shows that whatever the event may le , our response to it matters.",
+    "teacher_answer": "Initially, the poet's mood in 'Dust of Snow' is one of deep sadness, dejection, or melancholy. This somber mood is effectively conveyed through images traditionally associated with negativity or ill omen: a 'hemlock tree' (a poisonous plant) and a 'crow' (often seen as a symbol of sorrow or death). These images together create a bleak and desolate atmosphere, setting the stage for the transformative moment when the 'dust of snow' falls, signifying a shift in the poet's perspective.",
+    "score": 3,
+    "max_marks": 3,
+    "feedback": "Comprehensive answer. The student accurately identified the initial mood, the contrasting imagery used to establish it, and how these elements contribute to the poem's theme of positive change."
+  },
+  "Q8(iii)": {
+    "student_answer": "Though Custard in the poem by 'Ogden Nash' was initially thought to be a coward dragon, but to the contrary custard had all the traits of a dragon that makes it look scary and fearsome. Custard has spikes on his back and scales underneath. He could bring out fire from his mouth. He heas a huge dragon with shary sharp teeth with which he ate the pirate. His sharp spikes, huge body, fire from the mouth , sharp claves which were compared to daggers and the smoke enitting out of his hose, all make him a fearsome and scary dragon.",
+    "teacher_answer": "Custard, despite being perceived as a coward, possesses several physical characteristics that make him inherently fearsome, true to a dragon's nature. He has sharp, dagger-like teeth, spikes on his back, scales underneath his belly (described as 'plates of iron'), a mouth that is a 'fireplace', and a 'chimney for a nose' from which he breathes fire and smoke. These descriptions paint a vivid picture of a terrifying creature.",
+    "score": 3,
+    "max_marks": 3,
+    "feedback": "Excellent and detailed explanation. The student successfully listed all the physical attributes that make Custard appear fearsome, despite his timid nature."
+  },
+  "Q8(iv)": {
+    "student_answer": "The poem \"For Anne Gregory\" is a poem by William Butler Yeats , signifying that everyone except God love people for only the outer appearance. but not their inner beauty The speaker mentions God in the poem to give it a Spiritual dimension. The speaker says that he met a man who said that only divine love, that is, the type of love shown by yod is the only form of love that is free from the glamour and outer beauty. God love people for their inner beauty and not like people who are tempted towards the outer glamour, show and shine",
+    "teacher_answer": "In 'For Anne Gregory,' the speaker mentions God to highlight the central theme of the poem: the superficiality of human love and the contrast with divine love. The speaker argues that while human beings (particularly men) are drawn to Anne's beautiful physical appearance ('yellow hair'), only God is capable of loving her for her true self, her 'soul,' irrespective of her outward looks. This introduces a spiritual dimension, emphasizing that unconditional love, free from external allure, is a divine quality.",
+    "score": 3,
+    "max_marks": 3,
+    "feedback": "Very good explanation. The student accurately explained that God is mentioned to emphasize divine, unconditional love for inner beauty, contrasting it with human love often based on superficial appearance."
+  },
+  "Q8(v)": {
+    "student_answer": "Gautama Buddha's story stands true for each and every person on this earth regardless of their social and political status. The people in positions and power think themselves as the rulers of the world But they forget that whoever has taken ber birth on this earth has to die one day Humans are mortal All their power, position as well as wealth will be left behind once they die. Buddha believes that only good deeds of a person remains with him always. According to Buddha, we should not be self- centered in our life because this is the truth of life that no one can escape the cycle of life. wise people are those who do not grieve.",
+    "teacher_answer": "The Buddha's story, particularly his renunciation of princely life and his teachings on suffering and impermanence, carries a profound message for those in power and privilege. It teaches that power, wealth, and status are transient and cannot protect one from suffering, old age, disease, or death. It emphasizes the futility of attachment to material possessions and worldly pleasures, urging leaders to seek wisdom, compassion, and spiritual enlightenment rather than merely accumulating power, and to understand the universal nature of suffering that affects all, regardless of status.",
+    "score": 3,
+    "max_marks": 3,
+    "feedback": "Excellent answer. The student clearly articulated the message that Buddha's story conveys to the powerful: the transient nature of worldly power and wealth, the inevitability of death, and the lasting importance of good deeds and wisdom."
+  },
+  "Q9(i)": {
+    "student_answer": "It is rightly said that 'scientists contribute to nake the world a better place to live. But Griffin, on the contrary, was an antithesis to this statement Griffin discovered a rare drug that could make people invisible He took that drug to become invisible Griffin was a brilliant scientist leut he heas not a good person. He did not use his invention to help people, but to satisfy his own ego and do satanic deeds. He was a lawless person. His invention could be used to help his country as well as to bring fame for himself but he did not use it the right neay Patience would have been an asset for Griffin as would have common sense! Griffin heas a scientist as well as a person prone to anger which proved to be a dangerous combination for him as well as the people around him.",
+    "teacher_answer": "Griffin is an antithesis to the idea that scientists make the world a better place. While he was a brilliant scientist who discovered how to make the human body transparent, his motivation was purely selfish and malicious. Instead of using his groundbreaking invention for the benefit of humanity, he used it for personal gain, to escape detection after committing crimes like arson and theft. His actions throughout the story demonstrate a complete disregard for laws, ethics, and the well-being of others, transforming his scientific achievement into a tool for chaos and terror, thus making the world a worse, not better, place.",
+    "score": 3,
+    "max_marks": 3,
+    "feedback": "Excellent justification. The student clearly explained how Griffin's misuse of his scientific discovery for personal, destructive purposes made him an antithesis to the ideal scientist, citing relevant character traits and actions."
+  },
+  "Q9(ii)": {
+    "student_answer": "Bhali's teacher felt like an artist admiring her masterpiece. This statement holds true according to the story of Bholi Bholi was like a dumb cove she used to stammer and was ugly with pock marks on her face. Luckily, she was sent to school on the demand of the Tehsildar. St school, it was Bholi's teacher who helped her gain confidence. When Bholi heas being married off to an old man. she did not say anything But when the old man demanded dowry, she heas against it and spoke against it infront of everyone. Everyone was shocked to hear Bholi speaking without stammering Her teacher played a crucial role in transforming her Her teacher neas proud that Bholi chose to live a dignified life rather than surrendering herset herself to a greedy man. It was Bholi's teacher who helped her transform frons a dumb cow to a confident woman, that is, from Bholi - the simpleton to 'Sulekha.",
+    "teacher_answer": "Bholi's teacher felt like an artist admiring her masterpiece because she had taken a timid, stammering, and ignored girl (Bholi) who was considered a 'dumb cow' and, through patience, encouragement, and education, transformed her into a confident, self-respecting young woman capable of standing up for herself. Bholi's refusal of the dowry-seeking groom and her articulate speech at the wedding, defying her family's expectations, was the ultimate proof of the teacher's successful 'creation.' This transformation from a simpleton to 'Sulekha' was the teacher's true masterpiece.",
+    "score": 3,
+    "max_marks": 3,
+    "feedback": "Excellent justification. The student clearly outlined Bholi's initial condition and her remarkable transformation, which was a direct result of the teacher's dedication, making Bholi her 'masterpiece'."
+  },
+  "Q10(i)": {
+    "student_answer": "Childhood memories remind us of the days gone by. Memories help us to relive our young days. But, not everyone wants to remember their past, maybe because of the hardships they faced. Childhood of narrator in you The narrator had a beautiful and a wouth remembering childhood in you. The sound of the leaker's bamboo made him wake up and rush tonwards them. The narrator still remembers the beautiful smell of the breads and cakes which he heas fond of. The narrator shares beautiful memories of his past, about the breads of you. Childhood of Nelson Mandela Nelson Mandela thought his childhood to be free free but the freedom he experienced was as go just an illusion for the members of his race He had spent his childhood in one of the most harshest and inhumane societies of the world They were treated as slaves. There was racial donmination of dark skinned people in their own land. Comparision From the lives of both the narrators, we come to know that the narrator in youa had enjoyed his childhood days and were free to do whatever he wanted whereas Nelson Mandela sufferred from racial discrimination and spent his life fighting for equal rights. While the narrator of 's Baker in you' has sweet memories which everyone would want to live, on the contrary, Nelson Mandela faced many hardships and challenges in his life. No one would like to remember such a harsh past in their lives.",
+    "teacher_answer": "Childhood memories remind us of the days gone by. The narrator in 'A Baker from Goa' cherishes idyllic childhood memories filled with the aroma of freshly baked bread and cakes, the familiar 'thud and jingle' of the baker's bamboo, and a sense of community and simple joys. His childhood was characterized by freedom, cultural richness, and warmth, evoking a nostalgic, pleasant past. In stark contrast, Nelson Mandela’s childhood, though initially seemingly free within his tribe, was soon overshadowed by the harsh realities of apartheid. His memories were defined by systemic racial discrimination, the denial of basic rights, and a constant struggle against an oppressive regime. His early life instilled in him a profound sense of injustice and a lifelong commitment to fighting for freedom and equality, a childhood burdened by societal conflict rather than simple pleasures. Thus, one experienced innocent joy, while the other navigated systemic oppression, shaping their adulthoods profoundly. (Approx. 120 words)",
+    "score": 6,
+    "max_marks": 6,
+    "feedback": "Excellent comparison. The student effectively contrasted the pleasant, nostalgic childhood of the narrator in 'A Baker from Goa' with the challenging, struggle-filled early life of Nelson Mandela under apartheid, highlighting the impact of their respective environments on their memories and futures."
+  },
+  "Q11(ii)": {
+    "student_answer": "'The Thief's story' is an amazing story which shows us the importance of trust and values. Idari Singh was a thief He started living at Anil's house to nob him He befriended Anil and soon gained his trust. when snil got a payment of six hundred rupes, he kept it under his mattress. At night while snil neas sleeping Hari Singh slipped his hand under the ta mattress. and stole the money. But he could not run for heith the money. His conscience pricked him as he did not heant to break Anil's trust He felt guilty and came back home with the money which by then had been damp due to rain. He put the soggy notes back at the place from where he retrieved it snil, the next day, on knowing everything didn't react Even on knowing about this incidence, he accepted Hari with open hands. This shows us the importance of values. Values can even change a lead person. Sympathy, education and good behaviour are capable of changing a criminal into a good person Though circumstances made I Hari a criminal Snil in understood his position and decided to educate him It was Anil's trust and good behaviour which brought Hari back on the good path. Thus the statement, Anil successfully addressed the situation by not addressing it at all.",
+    "teacher_answer": "The statement 'He knew it but neither his lips nor his eyes showed anything' perfectly encapsulates Anil's mature and transformative approach in 'The Thief's Story.' When Hari Singh stole Anil's money and later returned it, placing the wet notes back under the mattress, Anil undoubtedly noticed the dampness and understood Hari's attempt to steal and subsequent change of heart. However, Anil chose not to confront Hari directly. Instead, he maintained his composure, gave Hari money the next morning (including the usual daily payment, even a little extra), and continued teaching him. By not addressing the theft verbally or explicitly, Anil demonstrated immense trust, forgiveness, and an understanding of human fallibility. This silent act of mercy and continued faith was far more impactful than any confrontation, prompting Hari Singh to genuinely reform and choose an honest path, proving that true reform comes through empathy and trust, not punishment or accusation.",
+    "score": 6,
+    "max_marks": 6,
+    "feedback": "Excellent answer. The student comprehensively explained Anil's non-confrontational approach, highlighting his trust, understanding, and the transformative power of his silent forgiveness in guiding Hari Singh towards reform."
+  },
+  "total_score": 46,
+  "max_total": 60
+}
+```

@@ -1,0 +1,5 @@
+google-generativeai
+PyMuPDF
+pdf2image
+Pillow
+json5

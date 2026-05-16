@@ -1,0 +1,380 @@
+{
+  "questions": [
+    {
+      "question_number": "1",
+      "total_marks": 10,
+      "attempt_required": "all",
+      "selection_policy": "none",
+      "subparts": [
+        {
+          "id": "i",
+          "question": "Based on the reading and understanding of the above passage, list 2 points to describe the purpose of UNESCO leading the celebration of World Day for Cultural Diversity for Dialogue and Development.",
+          "model_answer": "The purpose of UNESCO leading the celebration of World Day for Cultural Diversity for Dialogue and Development is to highlight the richness of the world's cultures and to emphasize the essential role of intercultural dialogue for achieving peace and sustainable development.",
+          "marks": 1
+        },
+        {
+          "id": "ii",
+          "question": "Select the option that corresponds to the meaning of the following sentence from para (2).\nThe recent international emergency has proved the intrinsic value of the cultural and creative sector at generating social cohesion, educational resource or personal well-being in times of crisis.\n(A) the real worth of cultural sector at generating social cohesion during pandemics\n(B) the real worth of creative sector at undermining the social cohesion during an international emergency\n(C) questioning the real worth of creative sector at generating education resource during an international emergency\n(D) highlighting the real worth of cultural and creative sector at generating social cohesion and educational resource during an international emergency",
+          "model_answer": "(D) highlighting the real worth of cultural and creative sector at generating social cohesion and educational resource during an international emergency",
+          "marks": 1
+        },
+        {
+          "id": "iii",
+          "question": "Based on your reading of the passage, examine in about 40 words how Sustainable Development Goals can be achieved.",
+          "model_answer": "Sustainable Development Goals (SDGs) can best be achieved by leveraging the creative potential inherent in the world's diverse cultures. Engaging in continuous dialogue is crucial to ensure that all members of society benefit equitably from sustainable development efforts.",
+          "marks": 2
+        },
+        {
+          "id": "iv",
+          "question": "What is the tone of the writer in the given line from paragraph (4)? Rationalise your response in about 40 words:\n\"Cultural diversity is an asset.\"",
+          "model_answer": "The tone of the writer in this line is affirmative and declarative. By stating that \"Cultural diversity is an asset,\" the writer conveys a sense of conviction and emphasizes its inherent value as a positive and indispensable resource for progress and well-being.",
+          "marks": 2
+        },
+        {
+          "id": "v",
+          "question": "The phrase 'bridging the gap' in paragraph (4) refers to :\n(A) widening the differences\n(B) connecting two desperate ideas\n(C) supporting the bridging\n(D) filling in the space between two connected things",
+          "model_answer": "(D) filling in the space between two connected things",
+          "marks": 1
+        },
+        {
+          "id": "vi",
+          "question": "In sets a-e below, identify two sets of synonyms.\na. richness and poverty\nb. intellectual and moral\nc. reduction and promotion\nd. essential and intrinsic\ne. urgent and crucial\nOptions:\n(A) a and c\n(B) b and e\n(C) d and e\n(D) b and d",
+          "model_answer": "(C) d and e",
+          "marks": 1
+        },
+        {
+          "id": "vii",
+          "question": "Complete the sentence appropriately :\nThe Second Committee of UN General Assembly in 2015 adopted ____.",
+          "model_answer": "The Second Committee of UN General Assembly in 2015 adopted the resolution on Culture and Sustainable Development.",
+          "marks": 1
+        },
+        {
+          "id": "viii",
+          "question": "Complete the following sentence:\n____ is urgent and necessary for peace, stability and development.",
+          "model_answer": "Bridging the gap between cultures is urgent and necessary for peace, stability and development.",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "question_number": "2",
+      "total_marks": 10,
+      "attempt_required": "all",
+      "selection_policy": "none",
+      "subparts": [
+        {
+          "id": "i",
+          "question": "Based on the reading of the extract, list 2 objectives of NEP 2020.",
+          "model_answer": "Two objectives of NEP 2020 are:\n1. To revise and revamp all aspects of education to create a system aligned with the aspirational goals of 21st-century students.\n2. To overcome the social status hierarchy associated with skill education and integrate it into mainstream education in a phased manner.",
+          "marks": 2
+        },
+        {
+          "id": "ii",
+          "question": "Fill in the blank with appropriate option from those given in the brackets, based on the understanding of paragraph (4).\nThe statement:\n\"The development of skill capacities will go hand-in-hand with the development of academic or other capacities\" is a / an ____ (fact / opinion) because it is a / an ____ (subjective judgement / objective detail)",
+          "model_answer": "The statement:\n\"The development of skill capacities will go hand-in-hand with the development of academic or other capacities\" is a / an __opinion__ (fact / opinion) because it is a / an __subjective judgement__ (subjective judgement / objective detail)",
+          "marks": 1
+        },
+        {
+          "id": "iii",
+          "question": "Select the option that corresponds to the meaning of the statement given below :\n\"According to the policy, by 2025, at least 50% of learners through the school and higher education system shall have exposure to skill education.\"\n(A) Maximum 50% learners shall have exposure to technical education.\n(B) Minimum 50% learners shall have exposure to technical education.\n(C) Minimum 50% learners shall have exposure to skill education.\n(D) Maximum 50% learners shall have exposure to skill education.",
+          "model_answer": "(C) Minimum 50% learners shall have exposure to skill education.",
+          "marks": 1
+        },
+        {
+          "id": "iv",
+          "question": "Based on the understanding of the passage, complete the following statement appropriately :\nThe benefit of the hub and spoke model will be ____.",
+          "model_answer": "The benefit of the hub and spoke model will be that schools can share facilities like skill labs, allowing other schools to use them without needing to set up their own.",
+          "marks": 1
+        },
+        {
+          "id": "v",
+          "question": "Complete the following analogy correctly with a word / phrase from paragraph (3):\nRacism: condemn :: ____ : respect",
+          "model_answer": "Racism: condemn :: dignity of labour : respect",
+          "marks": 1
+        },
+        {
+          "id": "vi",
+          "question": "As per the Global Scenario which country has the maximum percentage of students in Skill Education and what can be the possible reason?",
+          "model_answer": "As per the Global Scenario, South Korea has the maximum percentage of students in Skill Education (96%). A possible reason could be a strong national focus on vocational training and practical skills, integrating them deeply into their education system and economy to prepare students for specific industries.",
+          "marks": 2
+        },
+        {
+          "id": "vii",
+          "question": "Fill in the following blank choosing the most appropriate option from the ones given below :\nAs per NEP 2020, skill exposure will begin at ____.\n(A) middle and secondary school\n(B) primary school\n(C) higher school\n(D) senior secondary school",
+          "model_answer": "(A) middle and secondary school",
+          "marks": 1
+        },
+        {
+          "id": "viii",
+          "question": "Justify the statement - \"The NEP will create an awareness and appreciation of Indian arts and artisanship.\"",
+          "model_answer": "The NEP will create awareness and appreciation for Indian arts and artisanship because it emphasizes exposing every child to at least one skill and several more, which would lead to highlighting the dignity of labor and the importance of various vocations, including traditional Indian arts and artisanship.",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "question_number": "3",
+      "total_marks": 10,
+      "attempt_required": 10,
+      "selection_policy": "first_n",
+      "subparts": [
+        {
+          "id": "i",
+          "question": "Fill in the blank by using the correct form of the word in the bracket, for the given portion of a letter :\nDear Sir\nIt was agreed that the teacher would ____ (organise) the science fair for the students of grade 8.",
+          "model_answer": "It was agreed that the teacher would __organise__ the science fair for the students of grade 8.",
+          "marks": 1
+        },
+        {
+          "id": "ii",
+          "question": "Read the given sentence from a recipe review article. Identify the error and supply the correction in the sentence:\nThe soup recipe didn't turned out as expected, it was lacking in flavour.\nUse the given format for your response :\nError | Correction\n--- | ---",
+          "model_answer": "Error | Correction\n--- | ---\nturned | turn",
+          "marks": 1
+        },
+        {
+          "id": "iii",
+          "question": "Read the conversation given below between a receptionist and a guest. Complete the sentence by filling in the blank :\nReceptionist: Good to see you again, sir!\nGuest: Indeed, it's always nice to be back here.\nThe guest replied that ____.",
+          "model_answer": "The guest replied that __indeed, it was always nice to be back there__.",
+          "marks": 1
+        },
+        {
+          "id": "iv",
+          "question": "Read the dialogue between Raashi and Ratul regarding volunteer work:\nRaashi: What is the most rewarding part of volunteering?\nRatul: Seeing the positive impact we can make in people's lives is the most rewarding part.\nSelect the correct option to complete the reporting of the above dialogue.\nRaashi asked Ratul about the most rewarding part of volunteering. Ratul expressed that seeing the ____ is the most rewarding part.\n(A) positive impact we can make in people's lives\n(B) positive impact they can make in people's lives\n(C) positive impact they could make in people's lives\n(D) positive impact we could make in people's lives",
+          "model_answer": "Raashi asked Ratul about the most rewarding part of volunteering. Ratul expressed that seeing the __positive impact they could make in people's lives__ is the most rewarding part.\n(C) positive impact they could make in people's lives",
+          "marks": 1
+        },
+        {
+          "id": "v",
+          "question": "Fill in the blank by choosing the correct option from the bracket, to complete the sentence :\nThe quarterly performance report is attached and ____ (these / that / it) requires immediate attention from the management team.",
+          "model_answer": "The quarterly performance report is attached and __it__ (these / that / it) requires immediate attention from the management team.",
+          "marks": 1
+        },
+        {
+          "id": "vi",
+          "question": "Identify the error and supply correction for the given sentence taken from a case study :\n\"We specializes in arranging bespoke tours to exotic locations around the world.\"\nError | Correction\n--- | ---",
+          "model_answer": "Error | Correction\n--- | ---\nspecializes | specialise",
+          "marks": 1
+        },
+        {
+          "id": "vii",
+          "question": "Select the option that identifies the error and supplies the correction in the given sentence :\nShe wants to learns how to play the piano.\nOption | Error | Correction\n--- | --- | ---",
+          "model_answer": "(B) | learns | learn",
+          "marks": 1
+        },
+        {
+          "id": "viii",
+          "question": "The management felt that the company ____ include corporate social responsibility as part of its mission statement and work for the betterment of society.\n(A) must\n(B) ought\n(C) need\n(D) might",
+          "model_answer": "(B) ought",
+          "marks": 1
+        },
+        {
+          "id": "ix",
+          "question": "Report the dialogue between a vendor and his customer, by completing the sentence :\nVendor: Have you been busy lately?\nCustomer: Yes, I have been very occupied with work this week.\nThe vendor asked his customer if he had been busy of late. The customer confirmed this, stating that ____.",
+          "model_answer": "The vendor asked his customer if he had been busy of late. The customer confirmed this, stating that __he had been very occupied with work that week__.",
+          "marks": 1
+        },
+        {
+          "id": "x",
+          "question": "The residents ____ eagerly for the young ones to visit them every Sunday and bring cheer to their lonely lives :\n(A) has waited\n(B) has been waiting\n(C) were waiting\n(D) waited",
+          "model_answer": "(C) were waiting",
+          "marks": 1
+        },
+        {
+          "id": "xi",
+          "question": "Complete the line from a self awareness song, by filling in the blank with the correct option :\nThe autumn breeze cradles your thoughts,\nThe falling leaves ____ your melancholy,\nThe Sunset paints your mood,\nAs the evening ushers in the night.\n(A) share\n(B) shares\n(C) shared\n(D) shall share",
+          "model_answer": "(A) share",
+          "marks": 1
+        },
+        {
+          "id": "xii",
+          "question": "Identify the error and supply correction for this line from a health study:\nThe research explores the correlation of physical activity and mental health.\nUse the given format for your response:\nError | Correction\n--- | ---",
+          "model_answer": "Error | Correction\n--- | ---\nof | between",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "question_number": "4",
+      "total_marks": 5,
+      "attempt_required": 1,
+      "selection_policy": "first_n",
+      "subparts": [
+        {
+          "id": "A",
+          "question": "You are Soumya/Soham, living at 43-B, Blue Apartments, Prashant Lok. You wish to take up a three-week summer course in baking after finishing your class X board exams. Write a letter in about 120 words, to the Principal of Excellent Cooking, Block-D, Mahesh Enclave, seeking information about the course structure, course duration, fees, class timings, on job trainings etc.",
+          "model_answer": "43-B, Blue Apartments,\nPrashant Lok,\n[Your City/Date]\n\nThe Principal,\nExcellent Cooking,\nBlock-D, Mahesh Enclave,\n[City]\n\nSubject: Inquiry about a three-week summer baking course\n\nDear Sir/Madam,\n\nI am Soumya/Soham, a Class X student, and I will be completing my board examinations soon. I am keenly interested in pursuing a three-week summer baking course during my break.\n\nI would be grateful if you could provide me with detailed information regarding the course. Specifically, I would like to know about the course structure, the exact duration of the program, the fees involved, and the available class timings. Additionally, I would appreciate any information on whether the course includes practical on-job training opportunities. \n\nI look forward to your prompt response. Thank you.\n\nSincerely,\nSoumya/Soham",
+          "marks": 5
+        },
+        {
+          "id": "B",
+          "question": "You are Punit/Punita of Eric India Pvt. Ltd., Saman Chowk. You have received the reply to your letter of inquiry from Lifeway India Company. You feel confident about the company's terms and conditions. Write a letter placing an order for the furniture for your office, that you had mentioned in the previous communication. Include a reference to your previous letter. Remember to mention quantity, quality, mode of payment, delivery date and discount.",
+          "model_answer": "Eric India Pvt. Ltd.,\nSaman Chowk,\n[City/Date]\n\nThe Sales Manager,\nLifeway India Company,\n[Company Address - assume, or just leave blank as per prompt]\n\nSubject: Order for Office Furniture\n\nDear Sir/Madam,\n\nThis letter is in reference to our previous inquiry letter dated [Date of previous letter] and your subsequent reply, which we received on [Date of reply]. We are pleased with the terms and conditions outlined and would like to place an order for the following furniture for our office:\n\n1. Executive Desks (Premium Quality): 10 units\n2. Ergonomic Office Chairs (High Quality): 20 units\n3. Conference Table (Teak Wood): 1 unit\n\nKindly ensure that all items are of the superior quality as discussed. We prefer to make the payment via bank transfer upon delivery. We request a delivery by [Specific Date, e.g., 20th May 20XX] and anticipate the 10% bulk discount you offered. Please confirm the order and delivery schedule.\n\nThank you.\n\nSincerely,\nPunit/Punita\nManager, Eric India Pvt. Ltd.",
+          "marks": 5
+        }
+      ]
+    },
+    {
+      "question_number": "5",
+      "total_marks": 5,
+      "attempt_required": 1,
+      "selection_policy": "first_n",
+      "subparts": [
+        {
+          "id": "A",
+          "question": "The chart given below displays data about the number of gyms and the number of members in your city over the past decade. Write a paragraph analyzing the given data :",
+          "model_answer": "The provided bar chart illustrates the trend in the number of gyms and their memberships in a city over the past decade, from 2010 to 2022. Initially, in 2010, there were 2400 gyms with 2800 members. Both figures saw a steady increase, peaking in 2018 with 4500 gyms and an equal number of members. This indicates a growing fitness consciousness during that period. However, a significant decline is observed in 2020, likely due to the global pandemic, where the number of gyms dropped to 3000 and members to 2800. By 2022, there was a recovery, with gyms increasing to 3500 and members to 3600, suggesting a rebound in the fitness industry but not yet reaching the pre-pandemic highs of 2018.",
+          "marks": 5
+        },
+        {
+          "id": "B",
+          "question": "You are a teacher in New City Global School. The given bar graph shows a comparative analysis of students' performance in different subjects in the terminal exam. Write an analytical paragraph on the variation in the performances of students in about 120 words:",
+          "model_answer": "The bar graph provides a comparative analysis of student performance across five subjects – English, Hindi, Maths, Science, and Social Studies – for the first and second terminal exams. Maths consistently shows the highest average scores, improving from 90 in the first term to 95 in the second, indicating strong performance and continued growth. Science also shows positive progression, increasing from 85 to 90. English and Social Studies recorded modest improvements, with English moving from 65 to 70 and Social Studies from 75 to 80. Hindi, however, is the only subject where performance declined, dropping from 75 in the first term to 65 in the second. This suggests that while students are excelling in quantitative and inquiry-based subjects, attention is needed to address the decline in Hindi.",
+          "marks": 5
+        }
+      ]
+    },
+    {
+      "question_number": "6",
+      "total_marks": 5,
+      "attempt_required": 1,
+      "selection_policy": "first_n",
+      "subparts": [
+        {
+          "id": "A",
+          "question": "On the day of the inauguration, I was overwhelmed with a sense of history. In the first decade of the 20th century a few years after the bitter Anglo-Boer war and before my own birth, the white skinned people of South Africa patched up their differences and created a system of racial domination against the dark-skinned people of their own land. The structure they created formed the basis of one of the harshest, most inhumane societies the world has ever known. Now, in the last decade of the twentieth century, and my own eighth decade as a man, that system has been overturned forever and replaced by one that recognised the rights and freedoms of all peoples, regardless of the colour of their skin.\n(i) Explain the feelings of the narrator when he said; \"I was overwhelmed with a sense of history.\" 1\n(ii) The system of racial domination has been replaced by a system that: 1\n(A) confirms the education of the Blacks.\n(B) recognises the rights and freedoms of all people.\n(C) recollects the bitter experiences.\n(D) focuses on the personality development.\n(iii) Comment on the kind of society apartheid had created? 2\n(iv) Which phrase would correctly substitute 'patched up' in the given sentence from the extract: 1\n\"...the white skinned people of South Africa patched up their differences...\"",
+          "model_answer": "(i) When the narrator said, \"I was overwhelmed with a sense of history,\" he felt a profound emotional connection to the past struggles and sacrifices that led to that moment. He recognized the significance of the event as a turning point, marking the end of a long era of racial injustice and the beginning of a new, equitable society.\n(ii) (B) recognises the rights and freedoms of all people.\n(iii) Apartheid created an extremely harsh and inhumane society based on racial domination. It institutionalized severe discrimination, depriving dark-skinned people of their basic rights and freedoms, leading to immense suffering and oppression for the majority of the population.\n(iv) The phrase 'resolved their differences' or 'reconciled their disagreements' would correctly substitute 'patched up'.",
+          "marks": 5
+        },
+        {
+          "id": "B",
+          "question": "I started right away at the Montessori Nursery School. I stayed there until I was six, at which time I started in the first form. In the sixth form, my teacher was Mrs. Kuperus, the headmistress. At the end of the year we were both in tears as we said a heartbreaking farewell. In the summer of 1941, Grandma fell ill and had to have an operation, so my birthday passed with little celebration.\n(i) \"In the summer of 1941, Grandma fell ill and had to have an operation, so my birthday passed with little celebration.\" State any one inference about Anne from the above context. 1\n(ii) The first education of Anne started at ____. 1\n(A) some Kindergarten School\n(B) a Nursery School\n(C) Montessori Nursery School\n(D) Elementary School\n(iii) Who was Mrs. Kuperus? What kind of relationship did Anne share with her? 2\n(iv) Substitute the word 'heartbreaking' with a word similar in meaning in the following sentence: 1\n\"At the end of the year we were both in tears as we said a heartbreaking farewell.\"",
+          "model_answer": "(i) An inference about Anne from the context is that she was very sensitive and deeply cared for her grandmother, as her grandmother's illness overshadowed her own birthday celebration, indicating Anne's empathy.\n(ii) (C) Montessori Nursery School\n(iii) Mrs. Kuperus was Anne's headmistress in the sixth form. Anne shared a very close and affectionate relationship with her, so much so that both were in tears when they had to part ways, signifying a strong bond and mutual attachment.\n(iv) The word 'poignant' or 'wrenching' could substitute 'heartbreaking'.",
+          "marks": 5
+        }
+      ]
+    },
+    {
+      "question_number": "7",
+      "total_marks": 5,
+      "attempt_required": 1,
+      "selection_policy": "first_n",
+      "subparts": [
+        {
+          "id": "A",
+          "question": "He stalks in his vivid stripes\nThe few steps of his cage,\nOn pads of velvet quiet,\nIn his quiet rage.\nHe should be lurking in shadow,\nSliding through long grass\nNear the water pole\nWhere plump deer pass.\nHe should be snarling around houses\nAt the jungle's edge,\nBaring his white fangs, his claws,\nTerrorising the village!\n(i) State any one point of contrast between the tiger in the zoo and in its natural habitat. 1\n(ii) When the speaker suggests that the tiger should be \"Snarling around houses at the jungle's edge\"? What does he insinuate about the tiger's natural behaviour and habitat? 1\n(iii) The poet's skillful use of imagery effectively depicts the confinement and frustration of the tiger. Elaborate in about 40 words. 2\n(iv) Which phrase would correctly substitute 'quiet rage' in the given sentence from the extract: 1\nThe few steps of his cage on pads of velvet quiet in his 'quiet rage.'",
+          "model_answer": "(i) In the zoo, the tiger is confined to a small cage, taking only a few steps, whereas in its natural habitat, it would be free to lurk in shadows and slide through long grass, covering vast distances.\n(ii) The speaker insinuates that the tiger's natural behavior involves asserting its dominance and being a predator at the boundaries of its territory, instilling fear in human settlements near its jungle habitat. It highlights its wild, untamed nature.\n(iii) The poet uses imagery like \"vivid stripes\" and \"pads of velvet quiet\" to show the tiger's majestic appearance, immediately contrasting it with \"the few steps of his cage.\" This confinement, coupled with \"quiet rage,\" vividly conveys the animal's frustration and suppressed power, robbed of its natural freedom.\n(iv) The phrase 'suppressed fury' or 'controlled anger' would correctly substitute 'quiet rage'.",
+          "marks": 5
+        },
+        {
+          "id": "B",
+          "question": "No use to say 'O there are other balls\nAn ultimate shaking grief fixes the boy\nAs he stands rigid, trembling, staring down\nAll his young days into the harbour where his ball went.\nI would not intrude on him,\nA dime, another ball, is worthless. Now\nHe senses first responsibility\nIn a world of possessions. People will take\nBalls, balls will be lost always, little boy\nAnd no one buys a ball back. Money is external\nHe is learning.....\n(i) Which of the following best describes the speaker's attitude towards the boy's reaction to losing his ball? 1\n(A) Indifferent as the ball is inexpensive\n(B) Sympathetic, understanding the depth of the boy's loss\n(C) Mocking, finding the boy's reaction exaggerated and unnecessary.\n(D) Panicked, sharing the boy's distress over the lost ball.\n(ii) Comment on the use of metaphor in the above extract. 1\n(iii) Explain the phrase 'all his young days into the harbour' with reference to the extract. 1\n(iv) Briefly state in about 40 words the boy's journey from 'shaking grief' to 'he is learning' in the above extract. 2",
+          "model_answer": "(i) (B) Sympathetic, understanding the depth of the boy's loss\n(ii) The extract uses the lost ball as a metaphor for the loss of innocence, childhood, and the initial realization of responsibility in a material world. The 'world of possessions' symbolizes the adult world where loss is inevitable and things cannot always be bought back.\n(iii) The phrase 'all his young days into the harbour' refers to the boy watching not just his ball, but all his cherished childhood memories and experiences associated with that ball, metaphorically disappearing into the water. It signifies the emotional weight of his loss.\n(iv) The boy's journey begins with \"shaking grief\" over losing his ball, representing the deep emotional impact of his first significant loss. This intense sadness, however, evolves into a crucial learning moment as he comprehends the permanence of loss and the concept of responsibility in a materialistic world, realizing that some things cannot be replaced by money.",
+          "marks": 5
+        }
+      ]
+    },
+    {
+      "question_number": "8",
+      "total_marks": 12,
+      "attempt_required": 4,
+      "selection_policy": "first_n",
+      "subparts": [
+        {
+          "id": "i",
+          "question": "What mood of the poet is reflected in the poem 'Dust of Snow' initially? What images are used by the poet to bring about the effect? Comment.",
+          "model_answer": "Initially, the poet's mood in 'Dust of Snow' is melancholic and despondent. This is reflected through images like the 'hemlock tree,' which is poisonous and associated with death, and the 'crow,' often seen as an omen of ill-fortune. These images collectively create an atmosphere of gloom and sadness.",
+          "marks": 3
+        },
+        {
+          "id": "ii",
+          "question": "How far would you agree that one's positivity can bring in a spark of brightness even in adverse circumstances?",
+          "model_answer": "I strongly agree that positivity can transform adverse circumstances. Just as in 'Dust of Snow,' where a simple act of a crow shaking snow from a hemlock tree changed the poet's mood, maintaining a positive outlook can help us find glimmers of hope and beauty in difficult situations. It enables resilience and encourages finding solutions rather than dwelling on problems.",
+          "marks": 3
+        },
+        {
+          "id": "iii",
+          "question": "What makes custard, the dragon look fearsome? Explain.",
+          "model_answer": "Custard the dragon looks fearsome due to several physical attributes: he has big sharp teeth, spikes on his back, and scales underneath his belly. His mouth is described as a 'fireplace' and his nose as a 'chimney,' exhaling smoke, while his 'realio, trulio' daggers for toes complete his intimidating appearance, despite his cowardly nature.",
+          "marks": 3
+        },
+        {
+          "id": "iv",
+          "question": "Explain, why the speaker mentions God in the poem \"For Anne Gregory\".",
+          "model_answer": "In \"For Anne Gregory,\" the speaker mentions God to emphasize that only God, in His infinite wisdom, could love Anne for her inner self rather than her external beauty. It suggests that human beings, even with the best intentions, are often swayed by superficial appearances, highlighting the transient nature of physical beauty.",
+          "marks": 3
+        },
+        {
+          "id": "v",
+          "question": "What message might the Buddha's story hold for those who are in positions of power and privilege ?",
+          "model_answer": "The Buddha's story, particularly his renunciation of a princely life, carries a powerful message for those in power and privilege. It teaches that true enlightenment and lasting peace are not found in material wealth, status, or worldly pleasures, but in understanding suffering, detachment, and seeking spiritual truths. It advocates for empathy and humility over self-indulgence.",
+          "marks": 3
+        }
+      ]
+    },
+    {
+      "question_number": "9",
+      "total_marks": 6,
+      "attempt_required": 2,
+      "selection_policy": "first_n",
+      "subparts": [
+        {
+          "id": "i",
+          "question": "Scientists contribute to make the world a better place. Griffin is an antithesis to this statement. Justify.\n(Footprints Without Feet)",
+          "model_answer": "Scientists typically aim to use their knowledge for humanity's betterment. However, Griffin, the invisible scientist, is an antithesis because he uses his groundbreaking discovery purely for selfish, criminal, and malicious purposes. Instead of contributing positively, he causes harm, fear, and chaos, becoming a lawless individual rather than a benefactor.",
+          "marks": 3
+        },
+        {
+          "id": "ii",
+          "question": "Why did Bholi's teacher feel like an artist admiring her masterpiece?\n(Bholi)",
+          "model_answer": "Bholi's teacher felt like an artist admiring her masterpiece because she had taken a simple, stammering, neglected girl and, through consistent effort and encouragement, transformed her into a confident, self-respecting young woman who could stand up for herself. The teacher had sculpted Bholi's character and instilled self-worth.",
+          "marks": 3
+        },
+        {
+          "id": "iii",
+          "question": "Why was Madam Loisel shocked at the end of the story?\n(The Necklace)",
+          "model_answer": "Madam Loisel was shocked at the end of the story because she discovered that the diamond necklace she had replaced with ten years of hard labor and poverty was, in fact, a fake. Madame Forestier revealed that her original necklace was worth only five hundred francs, rendering Madam Loisel's immense sacrifice utterly meaningless.",
+          "marks": 3
+        }
+      ]
+    },
+    {
+      "question_number": "10",
+      "total_marks": 6,
+      "attempt_required": 1,
+      "selection_policy": "first_n",
+      "subparts": [
+        {
+          "id": "i",
+          "question": "In the chapter 'A Baker from Goa' the narrator talks about his childhood in Goa and his fond memories. In about 120 words write a presentation draft comparing the childhood of the narrator in 'A Baker from Goa' to that of Nelson Mandela.\nYou may begin this way:\nChildhood memories remind us of the days gone by.....\nReference: A Baker from Goa and Nelson Mandela : Long Walk",
+          "model_answer": "Childhood memories remind us of the days gone by and often shape our adult perspectives, yet they can be starkly different. The narrator's childhood in 'A Baker from Goa' evokes idyllic, nostalgic memories of a peaceful, community-oriented life. He recalls the friendly baker, the aroma of bread, and the simple joys of growing up in a close-knit Goan society, free from severe hardships or discrimination. His childhood was marked by innocence, warmth, and culinary delights, a period of secure normalcy.\n\nConversely, Nelson Mandela's childhood, as depicted in 'Long Walk to Freedom', was profoundly influenced by the oppressive reality of apartheid in South Africa. While he had a traditional tribal upbringing and moments of youthful freedom, his early life was soon overshadowed by racial segregation and injustice. His path diverged sharply towards activism and struggle for freedom, rather than simple pleasures. Thus, while both experienced childhood, the fundamental societal structures and personal experiences of joy versus systemic oppression created vastly different foundational memories.",
+          "marks": 6
+        },
+        {
+          "id": "ii",
+          "question": "Amanda from the poem 'Amanda' is a teenager like Anne Frank and lives in her fantasy world whereas Anne is a chatter box. What conversation will Anne Frank have with Amanda about different perspectives of life ? Write your answer in about 120 words. 6",
+          "model_answer": "Anne Frank: Amanda, why are you always lost in thought? Is your real life so dreary that you prefer imaginary mermaid tails and Rapunzel towers?\n\nAmanda: (Sighs) It’s not dreary, Anne, it’s just… restrictive. Everyone always tells me what to do, what not to do. In my head, I’m free. I can be anything, anywhere. Don’t you ever wish to escape?\n\nAnne Frank: Escape? Amanda, my whole life has been an escape, hiding in an attic! But even there, I didn't lose myself in pure fantasy. I observed, I wrote, I dreamt of a better world. You have a world out there, a normal one! You should embrace it, not retreat. You have the freedom to speak, to learn, to grow without fear of discovery.\n\nAmanda: But speaking often leads to being scolded. Isn't peace found in silence and solitude?\n\nAnne Frank: Silence is good, but true peace comes from understanding and engaging with your reality, not hiding from it. Your imagination is a gift, but don't let it blind you to the possibilities and responsibilities of your actual life. Speak up, learn, live! You have the luxury of making your real life as vibrant as your fantasies.",
+          "marks": 6
+        }
+      ]
+    },
+    {
+      "question_number": "11",
+      "total_marks": 6,
+      "attempt_required": 1,
+      "selection_policy": "first_n",
+      "subparts": [
+        {
+          "id": "i",
+          "question": "How did the lady in red manage to outsmart and out maneuver the other thief, Horace Danby, by robbing the safe without leaving a single fingerprint?\n(A Question of Trust)",
+          "model_answer": "The lady in red, a cunning and experienced thief, skillfully outsmarted Horace Danby by exploiting his meticulous nature and gentlemanly demeanor. She presented herself as the owner of the house, confidently walking in and immediately seizing control of the situation. She fabricated a story about forgetting the safe's number and needing her jewels for a party, appealing to Horace's vanity and his inherent respect for 'classy' people.\n\nHer crucial maneuver to ensure no fingerprints were left involved pretending she needed the jewels urgently but had forgotten her gloves. She then convinced Horace to open the safe for her, stressing the urgency and implying that she couldn't afford a scandal if her fingerprints were found. Horace, eager to please and unknowingly trapped, willingly removed his gloves and opened the safe, leaving his fingerprints all over the scene while the lady, being the 'owner,' could touch anything without suspicion. This allowed her to escape with the jewels, leaving Horace to take the fall for the robbery.",
+          "marks": 6
+        },
+        {
+          "id": "ii",
+          "question": "Hari Singh says - \"He knew it but neither his lips nor his eyes showed anything.\"\nAnil successfully addressed the situation by not addressing it at all. Elaborate based on your reading of The Thief's Story. 6",
+          "model_answer": "Hari Singh's observation, \"He knew it but neither his lips nor his eyes showed anything,\" perfectly encapsulates Anil's profound understanding and unconventional approach to handling the theft in 'The Thief's Story'. After Hari steals the money and then returns it, placing it back under the mattress, Anil undoubtedly realizes what has transpired. The wetness of the notes from the rain, combined with Hari's changed demeanor, would have been clear indicators.\n\nHowever, Anil chooses not to confront Hari directly. Instead, he addresses the situation by *not* addressing it verbally. The next morning, he simply gives Hari a fifty-rupee note, telling him he'll be paid regularly, and crucially, gives him a full meal. This act of silent forgiveness and continued trust is far more impactful than any accusation or lecture. Anil's silence and generosity convey that he understands Hari's struggle, offers him another chance, and appeals to his conscience rather than punishing him. This approach fosters a transformative change in Hari, teaching him the value of trust and respect, ultimately steering him towards an honest path, something direct confrontation would likely have failed to achieve.",
+          "marks": 6
+        }
+      ]
+    }
+  ]
+}

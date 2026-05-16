@@ -1,0 +1,86 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.local
+.env.production
+*.pem
+*.key
+
+# ========================
+# IDE / Editor
+# ========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ========================
+# OS Files
+# ========================
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
+npm-debug.log*
+
+# ========================
+# Uploads (user data)
+# ========================
+backend/uploads/keys/*
+backend/uploads/answers/*
+!backend/uploads/keys/.gitkeep
+!backend/uploads/answers/.gitkeep
+!backend/uploads/answers/descriptive/.gitkeep
+!backend/uploads/answers/omr/.gitkeep
+
+# ========================
+# ML Model Caches
+# ========================
+*.pt
+*.pth
+*.bin
+*.onnx
+*.h5
+sentence-transformers/
+torch_cache/
+
+# ========================
+# Misc
+# ========================
+*.bak
+*.tmp
+*.temp
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml

@@ -1,0 +1,455 @@
+{
+  "total_awarded": 58.3841,
+  "total_max": 80.0,
+  "percentage": 72.975,
+  "by_question": {
+    "1": {
+      "policy": {
+        "missing_subpart_policy": "zero",
+        "extra_attempt_policy": "none",
+        "weight_semantic": 0.6,
+        "weight_keyword": 0.4,
+        "attempt_required": "all"
+      },
+      "subparts": {
+        "i": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        },
+        "ii": {
+          "semantic_score": 0.1488,
+          "keyword_score": 0.0,
+          "score": 0.0893,
+          "marks": 0.0
+        },
+        "iii": {
+          "semantic_score": 0.8059,
+          "keyword_score": 0.6667,
+          "score": 0.7502,
+          "marks": 1.5004
+        },
+        "iv": {
+          "semantic_score": 0.7516,
+          "keyword_score": 0.4667,
+          "score": 0.6376,
+          "marks": 1.2753
+        },
+        "v": {
+          "semantic_score": 0.2331,
+          "keyword_score": 0.0,
+          "score": 0.1399,
+          "marks": 0.0
+        },
+        "vi": {
+          "semantic_score": 1.0,
+          "keyword_score": 0.0,
+          "score": 0.6,
+          "marks": 0.6
+        },
+        "vii": {
+          "semantic_score": 0.7957,
+          "keyword_score": 0.375,
+          "score": 0.6274,
+          "marks": 0.6274
+        },
+        "viii": {
+          "semantic_score": 0.2154,
+          "keyword_score": 0.2857,
+          "score": 0.2435,
+          "marks": 0.0
+        }
+      },
+      "total_marks": 10.0,
+      "final_score": 4.0031,
+      "notes": []
+    },
+    "2": {
+      "policy": {
+        "missing_subpart_policy": "zero",
+        "extra_attempt_policy": "none",
+        "weight_semantic": 0.6,
+        "weight_keyword": 0.4,
+        "attempt_required": "all"
+      },
+      "subparts": {
+        "i": {
+          "semantic_score": 0.7179,
+          "keyword_score": 0.3333,
+          "score": 0.5641,
+          "marks": 1.1281
+        },
+        "ii": {
+          "semantic_score": 0.3212,
+          "keyword_score": 0.1818,
+          "score": 0.2654,
+          "marks": 0.2654
+        },
+        "iii": {
+          "semantic_score": 0.1837,
+          "keyword_score": 0.0,
+          "score": 0.1102,
+          "marks": 0.0
+        },
+        "iv": {
+          "semantic_score": 0.5853,
+          "keyword_score": 0.25,
+          "score": 0.4512,
+          "marks": 0.4512
+        },
+        "v": {
+          "semantic_score": 0.5387,
+          "keyword_score": 0.2,
+          "score": 0.4032,
+          "marks": 0.4032
+        },
+        "vi": {
+          "semantic_score": 0.6947,
+          "keyword_score": 0.6,
+          "score": 0.6568,
+          "marks": 1.3136
+        },
+        "vii": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        },
+        "viii": {
+          "semantic_score": 0.8417,
+          "keyword_score": 0.6667,
+          "score": 0.7717,
+          "marks": 0.7717
+        }
+      },
+      "total_marks": 10.0,
+      "final_score": 4.3332,
+      "notes": []
+    },
+    "3": {
+      "policy": {
+        "missing_subpart_policy": "zero",
+        "extra_attempt_policy": "first_n",
+        "weight_semantic": 0.6,
+        "weight_keyword": 0.4,
+        "attempt_required": 10
+      },
+      "subparts": {
+        "i": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        },
+        "ii": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        },
+        "iii": {
+          "semantic_score": 0.6246,
+          "keyword_score": 0.5,
+          "score": 0.5748,
+          "marks": 0.5748
+        },
+        "iv": {
+          "semantic_score": 0.3019,
+          "keyword_score": 0.0,
+          "score": 0.1811,
+          "marks": 0.0
+        },
+        "v": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        },
+        "vi": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        },
+        "vii": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        },
+        "viii": {
+          "semantic_score": 0.3571,
+          "keyword_score": 0.0,
+          "score": 0.2143,
+          "marks": 0.0
+        },
+        "ix": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        },
+        "x": {
+          "semantic_score": 0.2517,
+          "keyword_score": 0.0,
+          "score": 0.151,
+          "marks": 0.0
+        },
+        "xi": {
+          "semantic_score": 1.0,
+          "keyword_score": 1.0,
+          "score": 1.0,
+          "marks": 1.0
+        },
+        "xii": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        }
+      },
+      "total_marks": 12.0,
+      "final_score": 1.5748,
+      "notes": []
+    },
+    "4": {
+      "policy": {
+        "missing_subpart_policy": "zero",
+        "extra_attempt_policy": "first_n",
+        "weight_semantic": 0.6,
+        "weight_keyword": 0.4,
+        "attempt_required": 1
+      },
+      "subparts": {
+        "A": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        },
+        "B": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        }
+      },
+      "total_marks": 10.0,
+      "final_score": 0.0,
+      "notes": [
+        "No answers found for this question in student JSON."
+      ]
+    },
+    "5": {
+      "policy": {
+        "missing_subpart_policy": "zero",
+        "extra_attempt_policy": "first_n",
+        "weight_semantic": 0.6,
+        "weight_keyword": 0.4,
+        "attempt_required": 1
+      },
+      "subparts": {
+        "A": {
+          "semantic_score": 0.7956,
+          "keyword_score": 0.5333,
+          "score": 0.6907,
+          "marks": 3.4534
+        },
+        "B": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        }
+      },
+      "total_marks": 10.0,
+      "final_score": 3.4534,
+      "notes": []
+    },
+    "6": {
+      "policy": {
+        "missing_subpart_policy": "zero",
+        "extra_attempt_policy": "first_n",
+        "weight_semantic": 0.6,
+        "weight_keyword": 0.4,
+        "attempt_required": 1
+      },
+      "subparts": {
+        "A": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        },
+        "B": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        }
+      },
+      "total_marks": 10.0,
+      "final_score": 0.0,
+      "notes": [
+        "No answers found for this question in student JSON."
+      ]
+    },
+    "7": {
+      "policy": {
+        "missing_subpart_policy": "zero",
+        "extra_attempt_policy": "first_n",
+        "weight_semantic": 0.6,
+        "weight_keyword": 0.4,
+        "attempt_required": 1
+      },
+      "subparts": {
+        "A": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        },
+        "B": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        }
+      },
+      "total_marks": 10.0,
+      "final_score": 0.0,
+      "notes": [
+        "No answers found for this question in student JSON."
+      ]
+    },
+    "8": {
+      "policy": {
+        "missing_subpart_policy": "zero",
+        "extra_attempt_policy": "first_n",
+        "weight_semantic": 0.6,
+        "weight_keyword": 0.4,
+        "attempt_required": 4
+      },
+      "subparts": {
+        "i": {
+          "semantic_score": 0.7659,
+          "keyword_score": 0.6667,
+          "score": 0.7262,
+          "marks": 2.1787
+        },
+        "ii": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        },
+        "iii": {
+          "semantic_score": 0.6991,
+          "keyword_score": 0.6,
+          "score": 0.6595,
+          "marks": 1.9784
+        },
+        "iv": {
+          "semantic_score": 0.6269,
+          "keyword_score": 0.5333,
+          "score": 0.5895,
+          "marks": 1.7684
+        },
+        "v": {
+          "semantic_score": 0.6717,
+          "keyword_score": 0.4,
+          "score": 0.563,
+          "marks": 1.6891
+        }
+      },
+      "total_marks": 15.0,
+      "final_score": 7.6146,
+      "notes": []
+    },
+    "9": {
+      "policy": {
+        "missing_subpart_policy": "zero",
+        "extra_attempt_policy": "first_n",
+        "weight_semantic": 0.6,
+        "weight_keyword": 0.4,
+        "attempt_required": 2
+      },
+      "subparts": {
+        "i": {
+          "semantic_score": 0.7335,
+          "keyword_score": 0.2,
+          "score": 0.5201,
+          "marks": 1.5603
+        },
+        "ii": {
+          "semantic_score": 0.8196,
+          "keyword_score": 0.6,
+          "score": 0.7318,
+          "marks": 2.1953
+        },
+        "iii": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        }
+      },
+      "total_marks": 9.0,
+      "final_score": 3.7556,
+      "notes": []
+    },
+    "10": {
+      "policy": {
+        "missing_subpart_policy": "zero",
+        "extra_attempt_policy": "first_n",
+        "weight_semantic": 0.6,
+        "weight_keyword": 0.4,
+        "attempt_required": 1
+      },
+      "subparts": {
+        "i": {
+          "semantic_score": 0.848,
+          "keyword_score": 0.5333,
+          "score": 0.7221,
+          "marks": 4.3327
+        },
+        "ii": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        }
+      },
+      "total_marks": 12.0,
+      "final_score": 4.3327,
+      "notes": []
+    },
+    "11": {
+      "policy": {
+        "missing_subpart_policy": "zero",
+        "extra_attempt_policy": "first_n",
+        "weight_semantic": 0.6,
+        "weight_keyword": 0.4,
+        "attempt_required": 1
+      },
+      "subparts": {
+        "i": {
+          "semantic_score": 0.0,
+          "keyword_score": 0.0,
+          "score": 0.0,
+          "marks": 0.0
+        },
+        "ii": {
+          "semantic_score": 0.6991,
+          "keyword_score": 0.3333,
+          "score": 0.5528,
+          "marks": 3.3167
+        }
+      },
+      "total_marks": 12.0,
+      "final_score": 3.3167,
+      "notes": []
+    }
+  }
+}

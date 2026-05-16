@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - AI Evaluator</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-text">Dark</span>
+    </div>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="gradient-text">AI Evaluator</h2>
+                <p class="user-role">Teacher</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" onclick="showSection('overview')">
+                    <span class="nav-icon">📊</span>
+                    <span>Overview</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('upload-key')">
+                    <span class="nav-icon">📝</span>
+                    <span>Upload Answer Key</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('submissions')">
+                    <span class="nav-icon">📄</span>
+                    <span>View Submissions</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('evaluate')">
+                    <span class="nav-icon">✅</span>
+                    <span>Evaluate Sheets</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('review')">
+                    <span class="nav-icon">🔍</span>
+                    <span>Review Results</span>
+                </a>
+                <a href="index.html" class="nav-item logout">
+                    <span class="nav-icon">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1 id="section-title">Dashboard Overview</h1>
+                <div class="header-actions">
+                    <button class="btn btn-primary" onclick="showSection('upload-key')">+ Upload Answer Key</button>
+                </div>
+            </header>
+
+            <!-- ================= OVERVIEW ================= -->
+            <div id="overview" class="content-section active">
+                <div class="stats-grid">
+                    <div class="stat-card card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-info">
+                            <h3>12</h3>
+                            <p>Total Exams</p>
+                        </div>
+                    </div>
+                    <div class="stat-card card">
+                        <div class="stat-icon">📄</div>
+                        <div class="stat-info">
+                            <h3>45</h3>
+                            <p>Submissions</p>
+                        </div>
+                    </div>
+                    <div class="stat-card card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-info">
+                            <h3>38</h3>
+                            <p>Evaluated</p>
+                        </div>
+                    </div>
+                    <div class="stat-card card">
+                        <div class="stat-icon">⏳</div>
+                        <div class="stat-info">
+                            <h3>7</h3>
+                            <p>Pending</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity card">
+                    <h3>Recent Submissions</h3>
+                    <div class="activity-list" id="recentActivity">
+                        <p>No recent activity yet.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= UPLOAD ANSWER KEY ================= -->
+            <div id="upload-key" class="content-section">
+                <div class="upload-container card">
+                    <h3>Upload Answer Key</h3>
+                    <form id="answerKeyForm">
+                        <div class="form-group">
+                            <label>Exam Name</label>
+                            <input type="text" id="examNameKey" placeholder="e.g., Mathematics Final Exam" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" id="subjectKey" placeholder="e.g., Mathematics" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Total Marks</label>
+                            <input type="number" id="totalMarks" placeholder="e.g., 100" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Answer Key Type</label>
+                            <select id="keyType">
+                                <option>Descriptive Answers</option>
+                                <option>MCQs</option>
+                                <option>Mixed (Descriptive + MCQs)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Upload Answer Key Document</label>
+                            <div class="file-upload" id="answerKeyUpload">
+                                <input type="file" id="answerKeyFile" accept="image/*,.pdf" hidden>
+                                <div class="upload-placeholder" onclick="document.getElementById('answerKeyFile').click()">
+                                    <span class="upload-icon">📁</span>
+                                    <p>Click to upload or drag and drop</p>
+                                    <p class="upload-hint">PDF, JPG, PNG (Max 10MB)</p>
+                                </div>
+                                <div class="file-preview" id="answerKeyPreview" style="display: none;">
+                                    <img id="answerKeyImage" style="max-width: 100%; border-radius: 8px;">
+                                    <p id="answerKeyFileName"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload Answer Key</button>
+                    </form>
+                    <div id="teacherUploadStatus" class="upload-status"></div>
+
+                    <h4 style="margin-top:20px;">Uploaded Answer Keys</h4>
+                    <ul id="teacherUploadList" class="upload-list"><p>No uploads yet.</p></ul>
+                </div>
+            </div>
+
+            <!-- ================= VIEW SUBMISSIONS (STUDENT ANSWER SHEETS) ================= -->
+            <div id="submissions" class="content-section">
+                <div class="submissions-container card">
+                    <h3>Student Submissions</h3>
+                    <div class="submissions-header">
+                        <input type="text" placeholder="Search by exam or roll number..." class="search-input">
+                        <select class="filter-select">
+                            <option>All</option>
+                            <option>Pending</option>
+                            <option>Evaluated</option>
+                        </select>
+                    </div>
+                    <!-- dynamic student submissions from JS -->
+                    <div id="studentSubmissions" class="submissions-grid">
+                        <p>Loading submissions...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= EVALUATE ================= -->
+            <div id="evaluate" class="content-section">
+                <div class="evaluate-container card">
+                    <h3>Evaluate Answer Sheet</h3>
+                    <div class="evaluate-content">
+                        <div class="sheet-preview">
+                            <h4>Answer Sheet Preview</h4>
+                            <div class="preview-placeholder">
+                                <p>Answer sheet image will appear here</p>
+                            </div>
+                        </div>
+                        <div class="evaluation-panel">
+                            <h4>AI Evaluation</h4>
+                            <div class="evaluation-info">
+                                <p><strong>Student:</strong> John Doe</p>
+                                <p><strong>Exam:</strong> Mathematics Final Exam</p>
+                                <p><strong>Total Marks:</strong> 100</p>
+                            </div>
+                            <button class="btn btn-primary btn-full" onclick="startEvaluation()">Start AI Evaluation</button>
+                            <div class="evaluation-progress" id="evaluationProgress" style="display: none;">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="progressFill"></div>
+                                </div>
+                                <p id="progressText">Processing... 0%</p>
+                            </div>
+                            <div class="evaluation-result" id="evaluationResult" style="display: none;">
+                                <h4>Evaluation Complete!</h4>
+                                <p class="result-score">Score: 85/100</p>
+                                <button class="btn btn-secondary btn-full" onclick="showSection('review')">Review Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= REVIEW RESULTS ================= -->
+            <div id="review" class="content-section">
+                <div class="review-container card">
+                    <h3>Review Evaluation Results</h3>
+                    <div class="result-summary">
+                        <div class="result-item">
+                            <label>Student Name:</label>
+                            <span>John Doe</span>
+                        </div>
+                        <div class="result-item">
+                            <label>Exam:</label>
+                            <span>Mathematics Final Exam</span>
+                        </div>
+                        <div class="result-item">
+                            <label>Score:</label>
+                            <span class="score-value">85/100</span>
+                        </div>
+                    </div>
+                    <div class="question-breakdown">
+                        <h4>Question-wise Breakdown</h4>
+                        <div class="question-item">
+                            <div class="question-header">
+                                <span>Question 1</span>
+                                <span class="question-score">10/10</span>
+                            </div>
+                            <p class="ai-feedback">Excellent answer with clear explanation and correct methodology.</p>
+                        </div>
+                        <div class="question-item">
+                            <div class="question-header">
+                                <span>Question 2</span>
+                                <span class="question-score">8/10</span>
+                            </div>
+                            <p class="ai-feedback">Good understanding but minor calculation error in step 3.</p>
+                        </div>
+                    </div>
+                    <div class="review-actions">
+                        <button class="btn btn-primary">Approve Results</button>
+                        <button class="btn btn-secondary">Adjust Scores</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="backend/js/theme.js"></script>
+    <script src="backend/js/dashboard.js"></script>
+</body>
+</html>

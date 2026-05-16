@@ -1,0 +1,17 @@
+# Core eval + NLP
+sentence-transformers==3.0.1
+yake==0.4.8
+numpy==1.26.4
+scikit-learn==1.4.2
+tqdm==4.66.4
+
+# Text normalization, synonyms, fuzzy matching
+nltk==3.9.1
+rapidfuzz==3.9.7
+unidecode==1.3.8
+
+# PDF & image (already in your project)
+google-generativeai==0.8.2
+pdf2image==1.17.0
+Pillow==10.4.0
+opencv-python-headless==4.10.0.84
