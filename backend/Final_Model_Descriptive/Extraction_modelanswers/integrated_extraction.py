@@ -25,7 +25,7 @@ import base64
 import argparse
 import time
 
-from groq import Groq
+from google import genai
 
 
 # ============================================================================
@@ -39,8 +39,8 @@ Follow these instructions carefully:
 
 1. Identify every main question (e.g., Q1, Q2, Q3, etc.).
 2. For each question, extract all its subparts such as (a), (b), (c), and (i), (ii), (iii), (iv), etc.
-3. If the student has written answers in a different or mixed order, rearrange them in **the correct numerical/alphabetical order** (Q1 → Q2 → Q3; within Q1: a → b → c; within subparts: i → ii → iii → iv).
-4. Extract only the student's handwritten **answer text** — ignore any question text, page numbers, or headings.
+3. If the student has written answers in a different or mixed order, rearrange them in **the correct numerical/alphabetical order** (Q1 -> Q2 -> Q3; within Q1: a -> b -> c; within subparts: i -> ii -> iii -> iv).
+4. Extract only the student's handwritten **answer text** -- ignore any question text, page numbers, or headings.
 5. If a question has no subparts, record it as a single text string.
 6. If a subpart exists but is blank or unreadable, mark it as `"unreadable"`.
 7. Preserve nested structure (e.g., Q1(c)(i)).
@@ -50,7 +50,7 @@ Return the final result **only** as a clean JSON object, with no extra text or e
 
 Important:
 - Always arrange questions and subparts in correct logical order even if written out of sequence in the PDF.
-- Do not paraphrase, summarize, or modify the text — extract it exactly as written.
+- Do not paraphrase, summarize, or modify the text -- extract it exactly as written.
 - Output must be valid JSON only.
 """
 
@@ -58,16 +58,16 @@ QUESTION_EXTRACTION_PROMPT = """
 You are extracting structured question data from an exam paper.
 
 Your task:
-1️⃣ Identify every main question (Q1, Q2, Q3…)
-2️⃣ Identify subparts (i, ii, iii / a, b, c / A, B etc.)
-3️⃣ For each question or subpart:
+1 Identify every main question (Q1, Q2, Q3...)
+2 Identify subparts (i, ii, iii / a, b, c / A, B etc.)
+3 For each question or subpart:
     - Extract EXACT question text
     - Generate a natural, correct, human-written "Model Answer"
     - Extract the marks written for that question/subpart
-4️⃣ Detect internal choice rules (like "Attempt any 1/2/4")
-    - If only one must be attempted → return:
+4 Detect internal choice rules (like "Attempt any 1/2/4")
+    - If only one must be attempted -> return:
       "attempt_required": 1, "selection_policy": "first_n"
-    - If all must be done → return:
+    - If all must be done -> return:
       "attempt_required": "all", "selection_policy": "none"
 
 Output MUST be a VALID JSON with this exact structure:
@@ -92,61 +92,45 @@ Output MUST be a VALID JSON with this exact structure:
 }
 
 Rules:
-✅ Remove page numbers, headers, footers
-✅ Ignore Hindi or duplicate translations
-✅ Ignore "for visually impaired" optional alternatives
-✅ Do NOT hallucinate marks – use only values present in the text
-✅ Do NOT include anything outside JSON
-✅ Grammar in answers must be high quality
+[OK] Remove page numbers, headers, footers
+[OK] Ignore Hindi or duplicate translations
+[OK] Ignore "for visually impaired" optional alternatives
+[OK] Do NOT hallucinate marks  use only values present in the text
+[OK] Do NOT include anything outside JSON
+[OK] Grammar in answers must be high quality
 """
 
 
 # ============================================================================
-# GROQ CLIENT HELPERS
+# GEMINI CLIENT HELPERS
 # ============================================================================
 
-def _get_groq_client(api_key: str) -> Groq:
-    """Create a Groq client instance."""
-    return Groq(api_key=api_key)
-
-
-def _groq_chat(client: Groq, system_prompt: str, user_content: str,
-               model: str = "llama-3.3-70b-versatile", retries: int = 3) -> str:
+def _gemini_chat(api_key: str, system_prompt: str, user_content: str,
+               model: str = "gemini-2.5-flash", retries: int = 3) -> str:
     """
-    Send a chat completion request to Groq with retry logic.
-
-    Args:
-        client: Groq client
-        system_prompt: System-level prompt
-        user_content: User message content
-        model: Model name (default: llama-3.3-70b-versatile)
-        retries: Number of retry attempts
-
-    Returns:
-        Response text from the model
+    Send a chat completion request to Gemini with retry logic.
     """
+    client = genai.Client(api_key=api_key)
+    # Gemini uses generation_config for structured output hints.
+    # However, for simple JSON extraction, we can just append to the prompt.
+    prompt = f"{system_prompt}\n\nPlease output your response in JSON format.\n\nUser Input:\n{user_content}"
+    
     for attempt in range(retries):
         try:
-            response = client.chat.completions.create(
+            response = client.models.generate_content(
                 model=model,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_content},
-                ],
-                temperature=0.2,
-                max_tokens=8192,
-                response_format={"type": "json_object"},
+                contents=prompt,
+                config={"temperature": 0.2}
             )
-            return response.choices[0].message.content
+            return response.text
         except Exception as e:
-            print(f"⚠️ Groq API error (attempt {attempt + 1}/{retries}): {e}")
+            print(f"[!] Gemini API error (attempt {attempt + 1}/{retries}): {e}")
             if attempt < retries - 1:
                 time.sleep(5 * (attempt + 1))
             else:
                 raise
 
-    raise Exception("All Groq API retries exhausted")
-
+    raise Exception("All Gemini API retries exhausted")
 
 # ============================================================================
 # PDF TEXT EXTRACTION (using Groq vision or fallback to text)
@@ -186,15 +170,7 @@ def extract_text_from_pdf(pdf_path: str, api_key: str, model: str = "llama-3.3-7
     Extract text from a PDF file.
 
     Uses local PDF parsing first. If that yields no text (e.g. scanned PDF),
-    falls back to Groq vision model for OCR.
-
-    Args:
-        pdf_path: Path to the PDF file
-        api_key: Groq API key
-        model: Model name for fallback OCR
-
-    Returns:
-        Extracted text string
+    falls back to Groq vision model for OCR using PyMuPDF to extract images.
     """
     if not os.path.exists(pdf_path):
         raise FileNotFoundError(f"PDF file not found: {pdf_path}")
@@ -202,29 +178,47 @@ def extract_text_from_pdf(pdf_path: str, api_key: str, model: str = "llama-3.3-7
     # Try local extraction first
     text = _read_pdf_text_fallback(pdf_path)
     if text and len(text.strip()) > 50:
-        print("📄 Text extracted locally from PDF")
+        print("[DOC] Text extracted locally from PDF")
         return text
 
-    # Fallback: send to Groq for text extraction
-    print("📤 Sending PDF content to Groq for text extraction...")
-    client = _get_groq_client(api_key)
-
-    # Read and encode PDF
-    with open(pdf_path, "rb") as f:
-        pdf_data = f.read()
-
-    # For Groq text models, we send base64 as text context
-    encoded_pdf = base64.b64encode(pdf_data).decode("utf-8")
-
-    prompt = (
-        "You are a precise document parser. The following is a base64-encoded PDF document. "
-        "Extract all readable text from this document, preserving question numbering, "
-        "subparts (a,b,c,i,ii, etc.), and marks. Do not summarize, just return clean structured text.\n\n"
-        f"Base64 PDF data (first 5000 chars): {encoded_pdf[:5000]}"
-    )
-
-    response_text = _groq_chat(client, "You are a document text extractor.", prompt, model)
-    return response_text
+    # Fallback: OCR using Google Gemini (Groq Vision is decommissioned)
+    print("[UP] Scanned PDF detected. Trying Gemini OCR for handwriting extraction...")
+    gemini_key = os.environ.get("GEMINI_API_KEY")
+    
+    if not gemini_key:
+        print("[X] GEMINI_API_KEY not found. Please set it in .env for handwriting OCR.")
+        return ""
+        
+    ocr_text = []
+    try:
+        from google import genai
+        import fitz
+        import PIL.Image
+        import io
+        
+        client = genai.Client(api_key=gemini_key)
+        
+        doc = fitz.open(pdf_path)
+        for page_num in range(min(len(doc), 10)):  # process up to 10 pages
+            page = doc.load_page(page_num)
+            pix = page.get_pixmap(matrix=fitz.Matrix(2, 2))
+            img_data = pix.tobytes("jpeg")
+            img = PIL.Image.open(io.BytesIO(img_data))
+            
+            prompt = "Extract all handwriting and text from this page exactly as it appears. Preserve question numbers and line breaks."
+            
+            response = client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=[img, prompt]
+            )
+            if response.text:
+                ocr_text.append(response.text)
+            
+        doc.close()
+        return "\n\n".join(ocr_text)
+    except Exception as e:
+        print(f"[X] Gemini Vision OCR Failed: {e}")
+        raise Exception(f"Gemini OCR Failed: {e}")
 
 
 # ============================================================================
@@ -233,11 +227,11 @@ def extract_text_from_pdf(pdf_path: str, api_key: str, model: str = "llama-3.3-7
 
 def extract_answers_from_pdf(pdf_path: str, api_key: str) -> dict:
     """
-    Extract student answers from PDF using Groq API.
+    Extract student answers from PDF using Gemini API.
 
     Args:
         pdf_path: Path to the student answer sheet PDF
-        api_key: Groq API key
+        api_key: Gemini API key
 
     Returns:
         Dictionary containing extracted answers
@@ -245,8 +239,7 @@ def extract_answers_from_pdf(pdf_path: str, api_key: str) -> dict:
     if not os.path.exists(pdf_path):
         raise FileNotFoundError(f"File not found at {pdf_path}")
 
-    print(f"🔹 Using Groq API for answer extraction")
-    client = _get_groq_client(api_key)
+    print(f"[*] Using Gemini API for answer extraction")
 
     # Extract text from PDF first
     pdf_text = extract_text_from_pdf(pdf_path, api_key)
@@ -254,17 +247,17 @@ def extract_answers_from_pdf(pdf_path: str, api_key: str) -> dict:
     if not pdf_text or len(pdf_text.strip()) < 10:
         raise Exception("Could not extract readable text from the PDF")
 
-    print("📤 Sending extracted text to Groq for answer structuring...")
+    print("[UP] Sending extracted text to Gemini for answer structuring...")
 
     user_msg = f"Here is the text extracted from a student's answer sheet:\n\n{pdf_text}"
 
-    response_text = _groq_chat(client, ANSWER_EXTRACTION_PROMPT, user_msg)
+    response_text = _gemini_chat(api_key, ANSWER_EXTRACTION_PROMPT, user_msg)
 
     try:
         extracted_json = json.loads(response_text)
         return extracted_json
     except json.JSONDecodeError as e:
-        print(f"⚠️ Error parsing JSON response: {e}")
+        print(f"[!] Error parsing JSON response: {e}")
         # Try to find JSON substring
         start = response_text.find('{')
         end = response_text.rfind('}')
@@ -277,23 +270,22 @@ def extract_answers_from_pdf(pdf_path: str, api_key: str) -> dict:
 # QUESTION PAPER EXTRACTION
 # ============================================================================
 
-def generate_model_answers(text: str, api_key: str, model: str = "llama-3.3-70b-versatile") -> dict:
+def generate_model_answers(text: str, api_key: str, model: str = "gemini-2.5-flash") -> dict:
     """
-    Generate model answers for extracted question text using Groq.
+    Generate model answers for extracted question text using Gemini.
 
     Args:
         text: Extracted question paper text
-        api_key: Groq API key
-        model: Groq model name
+        api_key: Gemini API key
+        model: Gemini model name
 
     Returns:
         Dictionary containing questions with model answers
     """
-    print("🤖 Generating model answers for each question...")
-    client = _get_groq_client(api_key)
+    print("[AI] Generating model answers for each question...")
 
     user_msg = f"Here is the extracted question paper text:\n\n{text}"
-    response_text = _groq_chat(client, QUESTION_EXTRACTION_PROMPT, user_msg, model)
+    response_text = _gemini_chat(api_key, QUESTION_EXTRACTION_PROMPT, user_msg, model)
 
     try:
         return json.loads(response_text)
@@ -305,20 +297,20 @@ def generate_model_answers(text: str, api_key: str, model: str = "llama-3.3-70b-
         raise
 
 
-def extract_questions_from_pdf(pdf_path: str, api_key: str, model: str = "llama-3.3-70b-versatile") -> dict:
+def extract_questions_from_pdf(pdf_path: str, api_key: str, model: str = "gemini-2.5-flash") -> dict:
     """
     Complete pipeline to extract questions and generate model answers.
 
     Args:
         pdf_path: Path to the question paper PDF
-        api_key: Groq API key
-        model: Groq model name
+        api_key: Gemini API key
+        model: Gemini model name
 
     Returns:
         Structured JSON with questions and model answers
     """
-    print(f"📄 Extracting questions from: {pdf_path}")
-    print(f"🔹 Using Groq model: {model}")
+    print(f"[DOC] Extracting questions from: {pdf_path}")
+    print(f"[*] Using Gemini model: {model}")
 
     extracted_text = extract_text_from_pdf(pdf_path, api_key, model)
     qna_data = generate_model_answers(extracted_text, api_key, model)
@@ -334,18 +326,18 @@ def save_to_json(data: dict, output_path: str):
     os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else ".", exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
-    print(f"✅ Data saved to {output_path}")
+    print(f"[OK] Data saved to {output_path}")
 
 
 def get_api_key() -> str:
-    """Get Groq API key from environment variable."""
-    api_key = os.environ.get("GROQ_API_KEY")
+    """Get Gemini API key from environment variable."""
+    api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        print("❌ ERROR: GROQ_API_KEY is not set in environment variables.")
-        print("👉 Set it before running:")
-        print("   Windows: set GROQ_API_KEY=YOUR_API_KEY_HERE")
-        print("   Linux/Mac: export GROQ_API_KEY=YOUR_API_KEY_HERE")
-        raise ValueError("GROQ_API_KEY is not set in environment variables.")
+        print("[X] ERROR: GEMINI_API_KEY is not set in environment variables.")
+        print("-> Set it before running:")
+        print("   Windows: set GEMINI_API_KEY=YOUR_API_KEY_HERE")
+        print("   Linux/Mac: export GEMINI_API_KEY=YOUR_API_KEY_HERE")
+        raise ValueError("GEMINI_API_KEY is not set in environment variables.")
     return api_key
 
 
@@ -376,7 +368,7 @@ Examples:
     api_key = get_api_key()
 
     if not os.path.exists(args.pdf):
-        print(f"❌ ERROR: PDF file not found at {args.pdf}")
+        print(f"[X] ERROR: PDF file not found at {args.pdf}")
         sys.exit(1)
 
     print("=" * 70)
@@ -392,20 +384,20 @@ Examples:
         result = extract_answers_from_pdf(args.pdf, api_key)
         if result:
             save_to_json(result, args.output)
-            print("\n✅ Student answers successfully extracted!")
+            print("\n[OK] Student answers successfully extracted!")
         else:
-            print("\n❌ Failed to extract student answers.")
+            print("\n[X] Failed to extract student answers.")
             sys.exit(1)
     elif args.mode == "questions":
         result = extract_questions_from_pdf(args.pdf, api_key, args.model)
         if result:
             save_to_json(result, args.output)
-            print("\n✅ Questions and model answers successfully extracted!")
+            print("\n[OK] Questions and model answers successfully extracted!")
         else:
-            print("\n❌ Failed to extract questions.")
+            print("\n[X] Failed to extract questions.")
             sys.exit(1)
 
-    print(f"\n✅ Extraction complete! Results saved to: {args.output}")
+    print(f"\n[OK] Extraction complete! Results saved to: {args.output}")
 
 
 if __name__ == "__main__":

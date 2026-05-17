@@ -66,7 +66,7 @@ def serialize_clean(obj):
             return serialize_clean(obj.tolist())
         return obj
     except Exception as e:
-        print(f"⚠️ Serialization error for {type(obj)}: {e}")
+        print(f"[!] Serialization error for {type(obj)}: {e}")
         return str(obj)
 
 
@@ -127,8 +127,15 @@ async def ai_evaluate_submission(roll_number: str):
                 detail=f"Student answer file not found: {student_files[0]}"
             )
         
-        logger.info(f"📄 Extracting student answers from: {student_pdf}")
+        logger.info(f"[DOC] Extracting student answers from: {student_pdf}")
         student_answers = extract_student_answers(str(student_pdf))
+        
+        # Check if extraction yielded empty answers (e.g. scanned image PDF without OCR)
+        if not student_answers or all(not str(v).strip() for v in student_answers.values()):
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="No readable text extracted from student answer sheet. If this is a scanned PDF (images), please provide a text-based PDF or ensure OCR is enabled."
+            )
         
         # Step 2: Find the answer key for this exam
         exam_name = submission.get("exam_name", "")
@@ -143,7 +150,7 @@ async def ai_evaluate_submission(roll_number: str):
         
         # Fallback: if no exact match, try finding any key (for backward compatibility or testing)
         if not answer_key:
-            print(f"⚠️ No exact answer key match for {exam_name} ({subject}). Using latest uploaded key.")
+            print(f"[!] No exact answer key match for {exam_name} ({subject}). Using latest uploaded key.")
             answer_key = uploads.find_one({
                 "type": "answer_key"
             }, sort=[("timestamp", -1)])
@@ -164,18 +171,18 @@ async def ai_evaluate_submission(roll_number: str):
                 detail=f"Answer key file not found: {key_filename}"
             )
         
-        logger.info(f"📚 Extracting model answers from: {key_pdf}")
+        logger.info(f"[BOOK] Extracting model answers from: {key_pdf}")
         model_answers = extract_question_paper(str(key_pdf))
         
         # Step 4: Run evaluation
-        logger.info("🤖 Running AI evaluation...")
+        logger.info("[AI] Running AI evaluation...")
         logger.debug(f"Model keys: {model_answers.keys() if model_answers else 'None'}")
         logger.debug(f"Student keys: {student_answers.keys() if student_answers else 'None'}")
         
         try:
             evaluation_report = evaluate_answers(model_answers, student_answers)
         except Exception as eval_err:
-            print(f"❌ Evaluation internal error: {eval_err}")
+            print(f"[X] Evaluation internal error: {eval_err}")
             import traceback
             traceback.print_exc()
             raise eval_err
@@ -208,7 +215,7 @@ async def ai_evaluate_submission(roll_number: str):
         logger.debug(f"Report content: {str(evaluation_report)[:2000]}")
 
         return serialize_clean({
-            "message": f"✅ AI Evaluation complete for Roll No {roll_number}",
+            "message": f"[OK] AI Evaluation complete for Roll No {roll_number}",
             "marks_obtained": round(total_awarded, 2),
             "total_marks": round(total_max, 2),
             "percentage": round(percentage, 2),
@@ -233,7 +240,7 @@ async def ai_evaluate_submission(roll_number: str):
         import traceback
         with open("error.log", "w", encoding="utf-8") as f:
             f.write(traceback.format_exc())
-        print(f"❌ Error: {str(e)}")
+        print(f"[X] Error: {str(e)}")
         traceback.print_exc()
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,

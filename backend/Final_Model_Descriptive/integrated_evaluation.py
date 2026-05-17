@@ -629,7 +629,7 @@ def compute_subpart_score(model_answer, student_answer, max_marks, config, is_mc
     # Ensure combined stays in range
     combined = max(0.0, min(1.0, combined))
 
-    # 2. If too low → 0 marks
+    # 2. If too low -> 0 marks
     if combined < min_partial:
         final_marks = 0.0
     else:
@@ -826,7 +826,7 @@ def save_evaluation(result: dict, output_path: str = "evaluation_report.json"):
     """
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
-    print(f"✅ Saved evaluation report → {output_path}")
+    print(f"[OK] Saved evaluation report -> {output_path}")
 
 
 # ============================================================================
@@ -906,9 +906,9 @@ Examples:
             custom_config = json.load(f)
             config.update(custom_config)
     
-    print("🚀 Running Integrated Automated Evaluation Engine...")
-    print(f"📖 Model answers: {args.model}")
-    print(f"📝 Student answers: {args.student}")
+    print(" Running Integrated Automated Evaluation Engine...")
+    print(f" Model answers: {args.model}")
+    print(f" Student answers: {args.student}")
     
     # Run evaluation
     result = evaluate_student_answers(
@@ -924,7 +924,7 @@ Examples:
     if not args.no_summary:
         print_summary(result)
     
-    print(f"\n✅ Evaluation complete! Results saved to: {args.output}")
+    print(f"\n[OK] Evaluation complete! Results saved to: {args.output}")
 
 
 if __name__ == "__main__":

@@ -32,7 +32,7 @@ from database import client, db, users, exams, uploads
 from routes.ai_routes import router as ai_router
 
 # Load env before anything else
-load_dotenv()
+load_dotenv(override=True)
 
 # logging
 logger = logging.getLogger("fastapi_app")
@@ -79,10 +79,6 @@ def secure_filename(filename: str) -> str:
     filename = _FILENAME_MULTI_SPACE.sub('_', filename).strip('._')
     return filename or 'unnamed'
 
-
-# ---------------------------------------------------------------------------
-# Lifespan handler (replaces deprecated @app.on_event)
-# ---------------------------------------------------------------------------
 # ---------------------------------------------------------------------------
 # Security Headers Middleware
 # ---------------------------------------------------------------------------
@@ -107,8 +103,8 @@ async def lifespan(app: FastAPI):
     # Validate critical env vars
     if IS_PRODUCTION and not os.environ.get('MONGODB_URI'):
         logger.error("[FATAL] MONGODB_URI is required in production")
-    if not os.environ.get('GROQ_API_KEY'):
-        logger.warning("[WARN] GROQ_API_KEY not set - AI features will be unavailable")
+    if not os.environ.get('GEMINI_API_KEY'):
+        logger.warning("[WARN] GEMINI_API_KEY not set - AI features will be unavailable")
 
     # Create upload directories
     for folder in [KEY_FOLDER, DESCRIPTIVE_FOLDER, OMR_FOLDER]:
@@ -151,7 +147,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
     )
 
 
-# CORS configuration – locked down in production
+# CORS configuration  locked down in production
 if IS_PRODUCTION:
     _origins = [origin.strip() for origin in os.environ.get('ALLOWED_ORIGINS', FRONTEND_BASE_URL).split(',')]
 else:
@@ -228,7 +224,7 @@ async def signup(request: Request):
         "role": data.get("role", "student")
     })
 
-    return {"message": "Signup successful ✅"}
+    return {"message": "Signup successful [OK]"}
 
 
 @app.post("/api/login")
@@ -251,7 +247,7 @@ async def login(request: Request):
     if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid credentials ❌"
+            detail="Invalid credentials [X]"
         )
 
     redirect_url = (
@@ -261,7 +257,7 @@ async def login(request: Request):
     )
 
     return {
-        "message": f"Welcome, {user['fullname']} ✅",
+        "message": f"Welcome, {user['fullname']} [OK]",
         "redirect": redirect_url,
         "user": {
             "fullname": user["fullname"],
@@ -322,7 +318,7 @@ async def upload_key(
         "timestamp": datetime.datetime.now().isoformat()
     })
 
-    return {"message": "Answer key and exam details uploaded successfully ✅"}
+    return {"message": "Answer key and exam details uploaded successfully [OK]"}
 
 
 @app.post("/api/upload-answer")
@@ -393,7 +389,7 @@ async def upload_answer(
         record.pop("_id", None)
 
         return {
-            "message": f"{len(saved_files)} file(s) uploaded successfully ✅",
+            "message": f"{len(saved_files)} file(s) uploaded successfully [OK]",
             "data": record
         }
     except HTTPException:
@@ -478,7 +474,7 @@ async def start_evaluation(roll_number: str):
     )
 
     return {
-        "message": f"✅ Evaluation complete for Roll No {roll_number}",
+        "message": f"[OK] Evaluation complete for Roll No {roll_number}",
         "marks_obtained": marks,
         "feedback": feedback
     }
@@ -525,7 +521,7 @@ async def evaluate_submission(request: Request):
             detail="No matching submission found"
         )
 
-    return {"message": "✅ Submission evaluated successfully"}
+    return {"message": "[OK] Submission evaluated successfully"}
 
 
 @app.get("/api/dashboard-stats")

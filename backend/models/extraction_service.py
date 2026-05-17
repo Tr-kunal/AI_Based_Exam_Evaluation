@@ -26,7 +26,7 @@ try:
         get_api_key
     )
 except ImportError as e:
-    print(f"⚠️ Warning: Could not import extraction module: {e}")
+    print(f"[!] Warning: Could not import extraction module: {e}")
     extract_answers_from_pdf = None
     extract_questions_from_pdf = None
     get_api_key = None
@@ -58,10 +58,10 @@ def extract_student_answers(pdf_path: str) -> dict:
         raise ExtractionError("Extraction module not available. Check dependencies.")
 
     try:
-        api_key = os.environ.get("GROQ_API_KEY")
+        api_key = os.environ.get("GEMINI_API_KEY")
         if not api_key:
             raise ExtractionError(
-                "GROQ_API_KEY not set in environment variables. "
+                "GEMINI_API_KEY not set in environment variables. "
                 "Please set it before using extraction features."
             )
 
@@ -78,13 +78,13 @@ def extract_student_answers(pdf_path: str) -> dict:
         raise ExtractionError(f"Failed to extract student answers: {str(e)}")
 
 
-def extract_question_paper(pdf_path: str, model: str = "llama-3.3-70b-versatile") -> dict:
+def extract_question_paper(pdf_path: str, model: str = "gemini-2.5-flash") -> dict:
     """
     Extract questions from a question paper PDF and generate model answers.
 
     Args:
         pdf_path: Absolute path to the question paper PDF
-        model: Groq model name to use (default: llama-3.3-70b-versatile)
+        model: Gemini model name to use (default: gemini-2.5-flash)
 
     Returns:
         Dictionary containing questions with model answers
@@ -100,14 +100,14 @@ def extract_question_paper(pdf_path: str, model: str = "llama-3.3-70b-versatile"
         raise ExtractionError("Extraction module not available. Check dependencies.")
 
     try:
-        api_key = os.environ.get("GROQ_API_KEY")
+        api_key = os.environ.get("GEMINI_API_KEY")
         if not api_key:
             raise ExtractionError(
-                "GROQ_API_KEY not set in environment variables. "
+                "GEMINI_API_KEY not set in environment variables. "
                 "Please set it before using extraction features."
             )
 
-        print(f"🔹 Requesting extraction with model: {model}")
+        print(f"[*] Requesting extraction with model: {model}")
         result = extract_questions_from_pdf(pdf_path, api_key, model)
 
         if not result:

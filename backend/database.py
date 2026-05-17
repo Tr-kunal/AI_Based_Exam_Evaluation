@@ -3,7 +3,7 @@ Database Configuration
 ======================
 
 Centralizes MongoDB connection for the application.
-Connection is resilient — app can start even if DB is temporarily unreachable.
+Connection is resilient  app can start even if DB is temporarily unreachable.
 """
 
 import os
@@ -20,7 +20,7 @@ except ImportError:
         "mongodb+srv:// URIs will fail. Run: pip install dnspython"
     )
 
-load_dotenv()
+load_dotenv(override=True)
 
 logger = logging.getLogger("database")
 
@@ -56,7 +56,7 @@ def _create_client():
             return _client
         except Exception as fallback_err:
             logger.error(f"[ERROR] Localhost MongoDB also failed: {fallback_err}")
-            # Return a client anyway — it will fail on actual operations
+            # Return a client anyway  it will fail on actual operations
             return MongoClient('mongodb://localhost:27017/', serverSelectionTimeoutMS=3000)
 
 

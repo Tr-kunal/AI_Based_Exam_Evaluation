@@ -27,7 +27,7 @@ try:
         CONFIG as EVAL_CONFIG
     )
 except ImportError as e:
-    print(f"⚠️ Warning: Could not import evaluation module: {e}")
+    print(f"[!] Warning: Could not import evaluation module: {e}")
     evaluate_student_answers = None
     EVAL_CONFIG = None
 
@@ -184,7 +184,7 @@ def format_evaluation_summary(report: Dict[str, Any]) -> str:
         # Add notes if any
         notes = qdata.get("notes", [])
         for note in notes:
-            summary_lines.append(f"    ℹ️ {note}")
+            summary_lines.append(f"     {note}")
     
     return "\n".join(summary_lines)
 

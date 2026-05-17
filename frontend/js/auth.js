@@ -1,5 +1,5 @@
 // Backend API base URL
-const API_BASE = 'http://127.0.0.1:5000';
+const API_BASE = 'http://127.0.0.1:8000';
 
 // ==================== LOGIN ====================
 document.getElementById('loginForm')?.addEventListener('submit', async function(e) {

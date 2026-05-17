@@ -25,9 +25,9 @@ def evaluate_answer_text(student_text: str, answer_key_text: str) -> dict:
     if ratio > 0.85:
         feedback = 'Excellent match to the answer key.'
     elif ratio > 0.6:
-        feedback = 'Good — several key points present.'
+        feedback = 'Good  several key points present.'
     elif ratio > 0.35:
-        feedback = 'Partial answer — some key points missing.'
+        feedback = 'Partial answer  some key points missing.'
     else:
         feedback = 'Answer does not match key. Provide more details.'
 

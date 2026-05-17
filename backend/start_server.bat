@@ -11,11 +11,11 @@ REM Activate virtual environment
 cd /d "%~dp0"
 call venv\Scripts\activate
 
-REM Check if GROQ_API_KEY is set
-if "%GROQ_API_KEY%"=="" (
-    echo WARNING: GROQ_API_KEY is not set!
+REM Check if GEMINI_API_KEY is set
+if "%GEMINI_API_KEY%"=="" (
+    echo WARNING: GEMINI_API_KEY is not set!
     echo AI evaluation features will not work without it.
-    echo Set it with: set GROQ_API_KEY=your_api_key_here
+    echo Set it with: set GEMINI_API_KEY=your_api_key_here
     echo.
 )
 
