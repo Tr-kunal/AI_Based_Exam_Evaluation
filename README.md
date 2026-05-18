@@ -8,7 +8,7 @@ Automated examination grading system using ML/NLP. Teachers upload answer keys, 
 |-------|-----------|
 | **Backend** | Python 3.11, FastAPI, Uvicorn |
 | **Database** | MongoDB (Atlas or local) |
-| **AI/ML** | Sentence Transformers, YAKE, Groq AI (Llama 3.3) |
+| **AI/ML** | Sentence Transformers, YAKE, Gemini API |
 | **Frontend** | HTML5, CSS3, Vanilla JavaScript |
 
 ## Quick Start
