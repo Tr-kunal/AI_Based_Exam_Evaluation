@@ -112,11 +112,8 @@ AI_Based_Exam_Evaluation/
 |----------|----------|-------------|
 | `MONGODB_URI` | Yes | MongoDB connection string |
 | `DB_NAME` | No | Database name (default: `exam_system`) |
-| `GROQ_API_KEY` | For AI | Groq API key for PDF extraction |
+| `GEMINI_API_KEY` | For AI | Gemini API key for PDF extraction |
 | `BASE_URL` | No | Backend URL (default: `http://127.0.0.1:5000`) |
 | `FRONTEND_BASE_URL` | No | Frontend URL (default: `http://127.0.0.1:5500`) |
 | `PORT` | No | Server port (default: `5000`) |
 
-## License
-
-MIT
